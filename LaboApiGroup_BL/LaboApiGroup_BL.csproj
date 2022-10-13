@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Mapper\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LaboApiGroup_Repo\LaboApiGroup_Repo.csproj" />
+  </ItemGroup>
+
 </Project>
