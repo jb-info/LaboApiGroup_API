@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LaboApiGroup_Repo.Entities
+namespace LaboApiGroup_BL.Models
 {
-    public class Users : IEntity<int>
+    public class Users_BLL : IEntity<int>
     {
         public int Id { get; set; }
         public string NickName { get; set; }

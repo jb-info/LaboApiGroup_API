@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace LaboApiGroup_Repo.Entities
 {
-    public class Users : IEntity<int>
+    public class RoleOfUser : IEntity<int>
     {
         public int Id { get; set; }
-        public string NickName { get; set; }
-        public string Email { get; set; }
-        public DateTime BirthDate { get; set; }
+        public int Id_User { get; set; }
+        public int Id_Role { get; set; }
     }
 }
