@@ -1,0 +1,10 @@
+﻿CREATE PROCEDURE [dbo].[P_Role_INSERT]
+	   @Name VARCHAR(50)
+AS
+BEGIN
+
+	INSERT INTO [Role] (Name) 
+	VALUES (@Name)
+
+END
+
