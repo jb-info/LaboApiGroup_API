@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaboApiGroup_Repo.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaboApiGroup_Repo.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,6 @@ namespace LaboApiGroup_Repo.Interfaces
         TKey Insert(TEntity entity);
         bool Update(TEntity data);
         bool Delete(TEntity id);
-
-
+        bool Delete(Gift id);
     }
 }

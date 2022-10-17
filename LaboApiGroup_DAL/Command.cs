@@ -8,6 +8,8 @@ namespace LaboApiGroup_DAL
 {
     public class Command
     {
+        public static object addValue;
+
         internal string Query { get; set; }
         internal bool IsStoredProcedure { get; set; }
         internal Dictionary<string, object> Parameters { get; set; }
