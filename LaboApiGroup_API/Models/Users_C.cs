@@ -2,7 +2,7 @@
 
 namespace LaboApiGroup_API.Models
 {
-    public class User_C : IEntity<int>
+    public class Users_C : IEntity<int>
     {
         public int Id { get; set; }
         public string NickName { get; set; }
