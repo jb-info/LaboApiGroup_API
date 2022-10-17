@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LaboApiGroup_BL\LaboApiGroup_BL.csproj" />
     <ProjectReference Include="..\LaboApiGroup_Repo\LaboApiGroup_Repo.csproj" />
   </ItemGroup>
 
