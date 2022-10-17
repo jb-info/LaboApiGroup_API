@@ -10,8 +10,8 @@ namespace LaboApiGroup_Repo.Repositories
 {
     public class UserRepository : BasicRepository.BasicRepo<int, Users>
     {
-        public UserRepository(string entityName, string idName) : base(entityName, idName)
-        {
+        public UserRepository() : base("Users", "Id")
+        {           
         }
 
         public override bool Delete(Users id)
