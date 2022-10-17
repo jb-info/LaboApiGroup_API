@@ -1,19 +1,17 @@
-﻿using LaboApiGroup_Repo.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LaboApiGroup_Repo.Interfaces
+namespace LaboApiGroup_BL.Interfaces
 {
-    public interface IRepository<TKey, TEntity>
-        where TEntity : IEntity<TKey>
+    public interface IGlobalInterfaces<TKey, TEntity> 
     {
         TEntity Get(TKey id);
         IEnumerable<TEntity> GetAll();
         TKey Insert(TEntity entity);
         bool Update(TEntity data);
-        bool Delete(TEntity id);
+        bool Delete(TEntity entity);
     }
 }

@@ -18,8 +18,7 @@ namespace LaboApiGroup_Repo.Repositories
 
         public override bool Delete(Gift id)
         {
-            Command cmd = new Command("")
-            cmd.AddParameter()
+            throw new NotImplementedException();
         }
 
         public override int Insert(Gift entity)
