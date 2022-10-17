@@ -1,4 +1,5 @@
-﻿using LaboApiGroup_Repo.Entities;
+﻿using LaboApiGroup_DAL;
+using LaboApiGroup_Repo.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LaboApiGroup_Repo.Repositories
 {
-    public class UserRepository : BasicRepository.BasicRepo<int, Users>
+    public class UserRepository : BasicRepository.BasicRepo<Guid, Users>
     {
         public UserRepository() : base("Users", "Id")
         {           
@@ -19,9 +20,16 @@ namespace LaboApiGroup_Repo.Repositories
             throw new NotImplementedException();
         }
 
-        public override int Insert(Users entity)
+        public override Guid Insert(Users entity)
         {
-            throw new NotImplementedException();
+            Command cmd = new("P_Users_Add", true);
+            cmd.AddParameter("id", entity.Id);
+            cmd.AddParameter("NickName", entity.NickName);
+            cmd.AddParameter("BirthDate", entity.BirthDate);
+            cmd.AddParameter("Email", entity.Email);
+            cmd.AddParameter("PassWord",entity.PassWord);
+            return (Guid)base.ConnectionString.ExecuteScalar(cmd);
+
         }
 
         public override bool Update(Users data)
@@ -33,7 +41,7 @@ namespace LaboApiGroup_Repo.Repositories
         {
             return new Users()
             {
-                Id = (int)dtr["id"],
+                Id = (Guid)dtr["id"],
                 Email = dtr["email"].ToString(),
                 NickName = dtr["NickName"].ToString(),
                 BirthDate = (DateTime)dtr["BirthDate"]

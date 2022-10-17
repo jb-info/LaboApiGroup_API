@@ -60,6 +60,7 @@
     <Folder Include="Views" />
     <Folder Include="StoredProcedure" />
     <Folder Include="Triggers" />
+    <Folder Include="Fonctions" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Table\Project.sql" />
@@ -82,6 +83,8 @@
     <Build Include="StoredProcedure\P_Role_UPDATE.sql" />
     <Build Include="Views\V_Project.sql" />
     <Build Include="Views\V_Role.sql" />
+    <Build Include="StoredProcedure\P_Users_Add.sql" />
+    <Build Include="Fonctions\GetSecretKey.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LaboApiGroup_DB.publish.xml" />

@@ -15,6 +15,5 @@ namespace LaboApiGroup_Repo.Interfaces
         TKey Insert(TEntity entity);
         bool Update(TEntity data);
         bool Delete(TEntity id);
-        bool Delete(Gift id);
     }
 }
