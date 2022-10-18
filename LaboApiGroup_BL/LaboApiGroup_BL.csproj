@@ -10,4 +10,8 @@
     <ProjectReference Include="..\LaboApiGroup_Repo\LaboApiGroup_Repo.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="InterfacesBLL\" />
+  </ItemGroup>
+
 </Project>

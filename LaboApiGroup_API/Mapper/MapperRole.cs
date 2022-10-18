@@ -5,6 +5,7 @@ namespace LaboApiGroup_API.Mapper
 {
     public static class MapperRole
     {
+
         public static Role_C RoleBLToClient(this Role_BLL role_BLL)
         {
             return new Role_C()
