@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LaboApiGroup_Repo.Repositories
 {
-    internal class ProjectRepo : BasicRepository.BasicRepo<int , Project>
+    public class ProjectRepo : BasicRepository.BasicRepo<int , Project>
     {
         public ProjectRepo() : base("Project", "Id")
         {
@@ -32,8 +32,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Delete(Project id)
         {
             Command cmd = new Command("P_Project_Delete", true);
-            cmd.AddParameter("@id", id);
-            
+            cmd.AddParameter("@id", id.Id);            
             return ConnectionString.ExecuteNonQuery(cmd) == 1;
         }
 
