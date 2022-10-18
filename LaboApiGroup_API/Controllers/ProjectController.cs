@@ -14,7 +14,7 @@ namespace LaboApiGroup_API.Controllers
         {
             _global = global;
         }
-        [HttpGet("{id")]
+        [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             return Ok(_global.Get(id));

@@ -10,7 +10,7 @@ namespace LaboApiGroup_BL.Mapper
 {
     public static class MapperUsersBLL
     {
-        public static Users_BLL Us_BLLtoUs_REPO(this Users us_repo)
+        public static Users_BLL ToBLL(this Users us_repo)
         {
             return new Users_BLL()
             {
@@ -20,7 +20,7 @@ namespace LaboApiGroup_BL.Mapper
                 NickName = us_repo.NickName,
             };
         }
-        public static Users Us_REPOtoUs_BLL(this Users_BLL us )
+        public static Users ToRepo(this Users_BLL us )
         {
             return new Users()
             {
@@ -28,7 +28,7 @@ namespace LaboApiGroup_BL.Mapper
                 NickName = us.NickName,
                 BirthDate = us.BirthDate,
                 Email = us.Email,
-
+                PassWord = us.PassWord,
             };
         }
     }

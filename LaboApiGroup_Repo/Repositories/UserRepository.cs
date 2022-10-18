@@ -11,19 +11,20 @@ namespace LaboApiGroup_Repo.Repositories
 {
     public class UserRepository : BasicRepository.BasicRepo<Guid, Users>
     {
-        public UserRepository() : base("Users", "Id")
+        public UserRepository() : base("Users", "Id_Users")
         {           
         }
 
         public override bool Delete(Users id)
         {
-            throw new NotImplementedException();
+            Command cmd = new("P_Users_Delete", true);
+            cmd.AddParameter("Id_Users", id.Id);
+            return base.ConnectionString.ExecuteNonQuery(cmd)==1;
         }
 
         public override Guid Insert(Users entity)
         {
             Command cmd = new("P_Users_Add", true);
-            cmd.AddParameter("id", entity.Id);
             cmd.AddParameter("NickName", entity.NickName);
             cmd.AddParameter("BirthDate", entity.BirthDate);
             cmd.AddParameter("Email", entity.Email);
@@ -34,17 +35,23 @@ namespace LaboApiGroup_Repo.Repositories
 
         public override bool Update(Users data)
         {
-            throw new NotImplementedException();
+            Command cmd = new("P_Users_UPDATE", true);
+            cmd.AddParameter("NickName", data.NickName);
+            cmd.AddParameter("BirthDate", data.BirthDate);
+            cmd.AddParameter("Email", data.Email);
+            cmd.AddParameter("PassWord", data.PassWord);
+            return base.ConnectionString.ExecuteNonQuery(cmd)==1;
+
         }
 
         protected override Users Convert(IDataRecord dtr)
         {
             return new Users()
             {
-                Id = (Guid)dtr["id"],
+                Id = Guid.Parse(dtr["Id_User"].ToString()),
                 Email = dtr["email"].ToString(),
-                NickName = dtr["NickName"].ToString(),
-                BirthDate = (DateTime)dtr["BirthDate"]
+                NickName = dtr["Nickname"].ToString(),
+                BirthDate = (DateTime)dtr["Birthdate"]
             };
         }
     }
