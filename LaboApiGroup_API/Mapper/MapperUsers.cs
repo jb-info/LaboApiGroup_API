@@ -12,7 +12,7 @@ namespace LaboApiGroup_API.Mapper
                 Password = u_BLL.Password,
                 NickName = u_BLL.NickName,
                 Email = u_BLL.Email,
-                BirthDate = u_BLL.BirthDate
+                BirthDate = u_BLL.BirthDate,
             };
         }
 
@@ -23,7 +23,9 @@ namespace LaboApiGroup_API.Mapper
                 Password = users_C.Password,
                 NickName = users_C.NickName,
                 Email = users_C.Email,
-                BirthDate = users_C.BirthDate
+                BirthDate = users_C.BirthDate,
+                PassWord = users_C.PassWord,
+                
             };
         }
     }

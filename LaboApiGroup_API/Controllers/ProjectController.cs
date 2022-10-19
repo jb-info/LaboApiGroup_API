@@ -14,7 +14,7 @@ namespace LaboApiGroup_API.Controllers
         {
             _global = global;
         }
-        [HttpGet("{id")]
+        [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             return Ok(_global.Get(id));
@@ -23,13 +23,15 @@ namespace LaboApiGroup_API.Controllers
         public IActionResult GetAll()
         {
             return Ok(_global.GetAll());
-        }
+        }      
 
+        [HttpPost]
         public IActionResult Insert(Project_C project)
         {            
             return Ok(_global.Insert(project.ClientToProjectBL()));
         }
 
+        [HttpPut]
         public IActionResult Update(Project_C project)
         {
             return Ok(_global.Update(project.ClientToProjectBL()));

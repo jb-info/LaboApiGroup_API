@@ -12,7 +12,7 @@ BEGIN
 
 	-- Recuperation de la valeur secrete
 	DECLARE @Secret NVARCHAR(50);
-	SET @Secret = [dbo].[GetSecretKey]();
+	SET @Secret = [dbo].GetSecretKey();
 
 	-- Hashage du mot de passe avec le salt
 	DECLARE @Password_hash VARBINARY(64);
