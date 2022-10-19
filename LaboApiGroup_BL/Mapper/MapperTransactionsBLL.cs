@@ -16,8 +16,8 @@ namespace LaboApiGroup_BL.Mapper
             return new Transactions_BLL()
             {
                 Id = tr_repo.Id,
-                Id_Project = tr_repo.Id,
-                Id_User = tr_repo.Id,
+                Id_Project = tr_repo.Id_Project,
+                Id_User = tr_repo.Id_User,
                 Amount = tr_repo.Amount,
                 Date_Transaction = tr_repo.Date_Transaction,
             };
@@ -33,10 +33,6 @@ namespace LaboApiGroup_BL.Mapper
                 Date_Transaction = tr.Date_Transaction,
 
             };
-
-
-
         }
     }
-
 }

@@ -88,5 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="LaboApiGroup_DB.publish.xml" />
+    <None Include="LaboApiGroup_DB2.publish.xml" />
   </ItemGroup>
 </Project>

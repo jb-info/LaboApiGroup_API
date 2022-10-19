@@ -14,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUserService, User_Service>();
+builder.Services.AddScoped<ITransactionService, Transactions_Service>();
 
 // Config du JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
