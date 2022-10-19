@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LaboApiGroup_BL.Services
 {
-    internal class GiftService_BL:
+    internal class GiftService_BL
     {
     }
 }
