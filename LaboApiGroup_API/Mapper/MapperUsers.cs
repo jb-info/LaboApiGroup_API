@@ -12,7 +12,7 @@ namespace LaboApiGroup_API.Mapper
                 Id = u_BLL.Id,
                 NickName = u_BLL.NickName,
                 Email = u_BLL.Email,
-                BirthDate = u_BLL.BirthDate
+                BirthDate = u_BLL.BirthDate,
             };
         }
 
@@ -23,7 +23,9 @@ namespace LaboApiGroup_API.Mapper
                 Id = users_C.Id,
                 NickName = users_C.NickName,
                 Email = users_C.Email,
-                BirthDate = users_C.BirthDate
+                BirthDate = users_C.BirthDate,
+                PassWord = users_C.PassWord,
+                
             };
         }
     }

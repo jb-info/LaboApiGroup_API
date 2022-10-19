@@ -2,7 +2,7 @@
 (
 		[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	   Id_Project INT,
-	   Id_User INT,
+	   Id_User UNIQUEIDENTIFIER,
 	   Amount INT,
 	   Date_Transaction DATE,
 	   FOREIGN KEY(Id_Project) REFERENCES Project(Id_Project),
