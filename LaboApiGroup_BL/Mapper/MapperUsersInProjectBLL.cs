@@ -14,16 +14,16 @@ namespace LaboApiGroup_BL.Mapper
         {
             return new UsersInProject_BLL()
             {
-                Id = uip_repo.Id,
-                Id_Project = uip_repo.Id,
-                Id_User = uip_repo.Id,
+                Id = uip_repo.Password,
+                Id_Project = uip_repo.Password,
+                Id_User = uip_repo.Password,
             };
         }
         public static UserInProject UIP_REPOtoUIP_REPO(this UsersInProject_BLL uip)
         {
             return new UserInProject()
             {
-                Id = uip.Id,
+                Password = uip.Id,
                 Id_User = uip.Id,
                 Id_Project = uip.Id,
             };

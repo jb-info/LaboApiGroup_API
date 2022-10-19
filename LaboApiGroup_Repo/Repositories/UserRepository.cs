@@ -23,7 +23,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override Guid Insert(Users entity)
         {
             Command cmd = new("P_Users_Add", true);
-            cmd.AddParameter("id", entity.Id);
+            cmd.AddParameter("id", entity.Password);
             cmd.AddParameter("NickName", entity.NickName);
             cmd.AddParameter("BirthDate", entity.BirthDate);
             cmd.AddParameter("Email", entity.Email);
@@ -41,7 +41,7 @@ namespace LaboApiGroup_Repo.Repositories
         {
             return new Users()
             {
-                Id = (Guid)dtr["id"],
+                Password = (Guid)dtr["id"],
                 Email = dtr["email"].ToString(),
                 NickName = dtr["NickName"].ToString(),
                 BirthDate = (DateTime)dtr["BirthDate"]

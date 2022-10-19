@@ -14,7 +14,7 @@ namespace LaboApiGroup_BL.Mapper
         {
             return new Users_BLL()
             {
-                Id = us_repo.Id,
+                
                 BirthDate = us_repo.BirthDate,
                 Email = us_repo.Email,
                 NickName = us_repo.NickName,
@@ -24,10 +24,11 @@ namespace LaboApiGroup_BL.Mapper
         {
             return new Users()
             {
-                Id = us.Id,
-                NickName = us.NickName,
+                
+                
                 BirthDate = us.BirthDate,
                 Email = us.Email,
+                NickName = us.NickName,
 
             };
         }

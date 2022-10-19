@@ -9,7 +9,7 @@ namespace LaboApiGroup_API.Mapper
         {
             return new Project_C()
             {
-                Id = p_BLL.Id,
+                Password = p_BLL.Password,
                 Start_Date = p_BLL.Start_Date,
                 End_Date = p_BLL.End_Date,
                 Description = p_BLL.Description,
@@ -24,7 +24,7 @@ namespace LaboApiGroup_API.Mapper
         {
             return new Project_BLL()
             {
-                Id = project_C.Id,
+                Password = project_C.Password,
                 Start_Date = project_C.Start_Date,
                 End_Date = project_C.End_Date,
                 Description = project_C.Description,

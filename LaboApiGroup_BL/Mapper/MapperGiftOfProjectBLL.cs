@@ -14,7 +14,7 @@ namespace LaboApiGroup_BL.Mapper
         {
             return new GiftOfProject_BLL()
             {
-                Id = gop_repo.Id,
+                Password = gop_repo.Password,
                 Id_Gift=gop_repo.Id_Gift,
                 Id_Project=gop_repo.Id_Project,
             };
@@ -23,7 +23,7 @@ namespace LaboApiGroup_BL.Mapper
         {
             return new GiftOfProject()
             {
-                Id=gop.Id,
+                Password=gop.Password,
                 Id_Gift= gop.Id_Gift,
                 Id_Project= gop.Id_Project,
 

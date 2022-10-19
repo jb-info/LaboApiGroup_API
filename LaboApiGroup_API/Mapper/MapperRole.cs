@@ -10,7 +10,7 @@ namespace LaboApiGroup_API.Mapper
         {
             return new Role_C()
             {
-                Id = role_BLL.Id,
+                Password = role_BLL.Password,
                 Name = role_BLL.Name
             };
         }
@@ -18,7 +18,7 @@ namespace LaboApiGroup_API.Mapper
         {
             return new Role_BLL()
             {
-                Id = role_C.Id,
+                Password = role_C.Password,
                 Name = role_C.Name
             };
         }

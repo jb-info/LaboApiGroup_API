@@ -9,7 +9,7 @@ namespace LaboApiGroup_API.Mapper
         {
             return new Users_C()
             {
-                Id = u_BLL.Id,
+                Password = u_BLL.Password,
                 NickName = u_BLL.NickName,
                 Email = u_BLL.Email,
                 BirthDate = u_BLL.BirthDate
@@ -20,7 +20,7 @@ namespace LaboApiGroup_API.Mapper
         {
             return new Users_BLL()
             {
-                Id = users_C.Id,
+                Password = users_C.Password,
                 NickName = users_C.NickName,
                 Email = users_C.Email,
                 BirthDate = users_C.BirthDate

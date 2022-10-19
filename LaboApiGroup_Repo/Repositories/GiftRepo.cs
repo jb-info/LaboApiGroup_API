@@ -12,7 +12,8 @@ namespace LaboApiGroup_Repo.Repositories
 {
     public class GiftRepo : BasicRepository.BasicRepo<int, Gift>
     {
-        public GiftRepo(string entityName, string idName) : base(entityName, idName)
+        
+        public GiftRepo() : base("Gift_id", "id")
         {
         }
 
@@ -22,7 +23,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Delete(Gift id)
         {
             Command cmd = new Command("P_Gift_Delete", true);
-            cmd.AddParameter("@Id_Gift", id.Id);
+            cmd.AddParameter("@Id_Gift", id.Password);
             return base.ConnectionString.ExecuteNonQuery(cmd) == 1;
             
             
@@ -40,7 +41,7 @@ namespace LaboApiGroup_Repo.Repositories
         {
             Command cmd = new Command("P_Gift_Update", true);
             cmd.AddParameter("Gift_Type", data.Gift_Type);
-            cmd.AddParameter("Id_Gift" , data.Id);
+            cmd.AddParameter("Id_Gift" , data.Password);
             cmd.AddParameter("Landing", data.landing);
             return base.ConnectionString.ExecuteNonQuery(cmd)==1;
 

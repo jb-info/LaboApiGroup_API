@@ -19,7 +19,7 @@ namespace LaboApiGroup_Repo.Repositories
         {
             return new Project
             {
-                Id = (int)dtr["id"],
+                Password = (int)dtr["id"],
                 Start_Date = (DateTime)dtr["Start_Date"],
                 End_Date = (DateTime)dtr["End_Date"],
                 Description = dtr["Description"].ToString(),
@@ -32,7 +32,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Delete(Project id)
         {
             Command cmd = new Command("P_Project_Delete", true);
-            cmd.AddParameter("@id", id.Id);            
+            cmd.AddParameter("@id", id.Password);            
             return ConnectionString.ExecuteNonQuery(cmd) == 1;
         }
 

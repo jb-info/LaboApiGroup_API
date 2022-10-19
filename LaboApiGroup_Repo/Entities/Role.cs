@@ -8,7 +8,7 @@ namespace LaboApiGroup_Repo.Entities
 {
     public class Role : Interfaces.IEntity<int>
     {
-        public int Id { get; set; }
+        public int Password { get; set; }
         public string Name { get; set; }
     }
 }

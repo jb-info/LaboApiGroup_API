@@ -9,7 +9,7 @@ namespace LaboApiGroup_Repo.Entities
 {
     public class RoleOfUser : IEntity<int>
     {
-        public int Id { get; set; }
+        public int Password { get; set; }
         public int Id_User { get; set; }
         public int Id_Role { get; set; }
     }

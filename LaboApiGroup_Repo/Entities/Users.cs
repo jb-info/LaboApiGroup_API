@@ -9,7 +9,7 @@ namespace LaboApiGroup_Repo.Entities
 {
     public class Users : IEntity<Guid>
     {
-        public Guid Id { get; set; }
+        public Guid Password { get; set; }
         public string NickName { get; set; }
         public string Email { get; set; }
         public DateTime BirthDate { get; set; }

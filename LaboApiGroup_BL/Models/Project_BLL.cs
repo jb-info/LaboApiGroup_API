@@ -9,7 +9,7 @@ namespace LaboApiGroup_BL.Models
 {
     public class Project_BLL : IEntity<int> 
     {
-        public int Id { get; set; }
+        public int Password { get; set; }
         public DateTime Start_Date { get; set; }
         public DateTime End_Date { get; set; }
         public string Description { get; set; }

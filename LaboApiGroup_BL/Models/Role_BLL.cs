@@ -9,7 +9,7 @@ namespace LaboApiGroup_BL.Models
 {
     public class Role_BLL : IEntity<int>
     {
-        public int Id { get; set; }
+        public int Password { get; set; }
         public string Name { get; set; }
     }
 }

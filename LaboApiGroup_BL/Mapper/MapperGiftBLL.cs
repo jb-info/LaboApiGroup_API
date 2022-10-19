@@ -14,7 +14,7 @@ namespace LaboApiGroup_BL.Mapper
         {
             return new Gift_BLL()
             {
-                Id = gf_Repo.Id,
+                Password = gf_Repo.Password,
                 Gift_Type = gf_Repo.Gift_Type,
                 landing = gf_Repo.landing,
 
@@ -28,7 +28,7 @@ namespace LaboApiGroup_BL.Mapper
         {
             return new Gift()
             {
-                Id = gift_bll.Id,
+                Password = gift_bll.Password,
                 Gift_Type = gift_bll.Gift_Type,
                 landing = gift_bll.landing,
             }; 
