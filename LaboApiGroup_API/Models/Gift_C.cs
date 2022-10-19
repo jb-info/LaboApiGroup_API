@@ -1,4 +1,6 @@
-﻿namespace LaboApiGroup_API.Models
+﻿using LaboApiGroup_Repo.Interfaces;
+
+namespace LaboApiGroup_API.Models
 {
     public class Gift_C : IEntity<int>
     {
