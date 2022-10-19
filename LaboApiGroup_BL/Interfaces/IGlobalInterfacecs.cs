@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaboApiGroup_BL.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,6 @@ namespace LaboApiGroup_BL.Interfaces
         TKey Insert(TEntity entity);
         bool Update(TEntity data);
         bool Delete(TEntity entity);
+        object? Update(Func<Gift_BLL> clientToGiftB);
     }
 }

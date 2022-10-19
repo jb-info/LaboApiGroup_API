@@ -14,7 +14,7 @@ namespace LaboApiGroup_BL.Mapper
         {
             return new Role_BLL
             {
-                Password = r_repo.Password,
+                Id = r_repo.Id,
                 Name = r_repo.Name,
             };
 
@@ -24,7 +24,7 @@ namespace LaboApiGroup_BL.Mapper
         {
             return new Role
             {
-                Password = r.Password,
+                Id = r.Id,
                 Name = r.Name,
             };
 

@@ -4,7 +4,7 @@ namespace LaboApiGroup_API.Models
 {
     public class Project_C : IEntity<int>
     {
-        public int Password { get; set; }
+        public int Id { get; set; }
         public DateTime Start_Date { get; set; }
         public DateTime End_Date { get; set; }
         public string Description { get; set; }

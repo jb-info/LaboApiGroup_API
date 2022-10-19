@@ -21,7 +21,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Delete(Role id)
         {
             Command cmd = new Command("P_Role_Delete", true);
-            cmd.AddParameter("@id", id.Password);
+            cmd.AddParameter("@id", id.Id);
             return ConnectionString.ExecuteNonQuery(cmd)==1;
 
         }

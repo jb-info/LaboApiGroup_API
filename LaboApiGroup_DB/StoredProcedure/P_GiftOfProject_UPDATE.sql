@@ -5,6 +5,6 @@
 AS
 BEGIN
 	UPDATE GiftOfProject
-	SET [Id] = @Id, [Id_Project]=@Id_Project, [Id_Gift]=@Id_Gift
+	SET   [Id_Project] = @Id_Project, [Id_Gift] = @Id_Gift
 	WHERE Id = @Id
 END

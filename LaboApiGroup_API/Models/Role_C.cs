@@ -4,7 +4,7 @@ namespace LaboApiGroup_API.Models
 {
     public class Role_C : IEntity<int>
     {
-        public int Password { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
     }
 }

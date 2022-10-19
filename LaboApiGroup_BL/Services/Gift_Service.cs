@@ -42,5 +42,10 @@ namespace LaboApiGroup_BL.Services
         {
             return _repository.Update(data.GiftRepoToGiftBLL());
         }
+
+        public object? Update(Func<Gift_BLL> clientToGiftB)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

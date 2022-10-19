@@ -23,7 +23,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Delete(Gift id)
         {
             Command cmd = new Command("P_Gift_Delete", true);
-            cmd.AddParameter("@Id_Gift", id.Password);
+            cmd.AddParameter("@Id_Gift", id.Id_Gift);
             return base.ConnectionString.ExecuteNonQuery(cmd) == 1;
             
             
@@ -41,7 +41,7 @@ namespace LaboApiGroup_Repo.Repositories
         {
             Command cmd = new Command("P_Gift_Update", true);
             cmd.AddParameter("Gift_Type", data.Gift_Type);
-            cmd.AddParameter("Id_Gift" , data.Password);
+            cmd.AddParameter("Id_Gift" , data.Id_Gift);
             cmd.AddParameter("Landing", data.landing);
             return base.ConnectionString.ExecuteNonQuery(cmd)==1;
 

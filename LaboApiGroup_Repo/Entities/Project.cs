@@ -8,7 +8,7 @@ namespace LaboApiGroup_Repo.Entities
 {
     public class Project : Interfaces.IEntity<int>
     {
-        public int Password { get; set; }
+        public int Id { get; set; }
         public DateTime Start_Date { get; set; }
         public DateTime End_Date { get; set; }
         public string Description { get; set; }

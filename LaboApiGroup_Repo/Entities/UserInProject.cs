@@ -9,7 +9,7 @@ namespace LaboApiGroup_Repo.Entities
 {
     public class UserInProject:IEntity<int>
     {
-        public int Password { get; set; }
+        public int Id { get; set; }
         public int Id_Project  { get; set; }
         public int Id_User { get; set; }
 

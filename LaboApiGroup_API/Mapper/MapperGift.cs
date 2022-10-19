@@ -9,7 +9,7 @@ namespace LaboApiGroup_API.Mapper
         {
             return new Gift_C()
             {
-                Id = gift_BLL.Password,
+                Id = gift_BLL.Id,
                 Gift_Type = gift_BLL.Gift_Type,
                 landing = gift_BLL.landing
             };
@@ -19,7 +19,7 @@ namespace LaboApiGroup_API.Mapper
         {
             return new Gift_BLL()
             {
-                Password = gift_C.Id,
+                Id = gift_C.Id,
                 Gift_Type = gift_C.Gift_Type,
                 landing = gift_C.landing
             };

@@ -18,7 +18,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Delete(Users id)
         {
             Command cmd = new("P_Users_Delete", true);
-            cmd.AddParameter("Id_Users", id.Id);
+            cmd.AddParameter("Id", id.Id);
             return base.ConnectionString.ExecuteNonQuery(cmd)==1;
         }
 
@@ -48,7 +48,7 @@ namespace LaboApiGroup_Repo.Repositories
         {
             return new Users()
             {
-                Id = Guid.Parse(dtr["Id_User"].ToString()),
+                Id = (Guid)dtr["Id"],
                 Email = dtr["email"].ToString(),
                 NickName = dtr["Nickname"].ToString(),
                 BirthDate = (DateTime)dtr["Birthdate"]

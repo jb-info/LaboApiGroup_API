@@ -14,7 +14,7 @@ namespace LaboApiGroup_BL.Mapper
         {
             return new Project_BLL
             {
-                Password = pr_repo.Password,
+                Id = pr_repo.Id,
                 Start_Date = pr_repo.Start_Date,
                 End_Date = pr_repo.End_Date,
                 Description = pr_repo.Description,
@@ -29,7 +29,7 @@ namespace LaboApiGroup_BL.Mapper
         {
             return new Project
             {
-                Password = pr.Password,
+                Id = pr.Id,
                 Start_Date = pr.Start_Date,
                 End_Date = pr.End_Date,
                 Description = pr.Description,
