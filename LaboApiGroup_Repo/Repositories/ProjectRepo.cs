@@ -15,6 +15,7 @@ namespace LaboApiGroup_Repo.Repositories
         {
         }
 
+
         protected override Project Convert(IDataRecord dtr)
         {
             return new Project
@@ -59,6 +60,18 @@ namespace LaboApiGroup_Repo.Repositories
             cmd.AddParameter("@Earn_Money", data.Earn_Money);            
             return ConnectionString.ExecuteNonQuery(cmd) == 1;
         }
+
+        //protected override Project Convert(IDataRecord dtr)
+        //{
+                
+        //    return new Project
+        //    {
+                
+        //        Start_Date = (DateTime)dtr
+
+
+        //    };
+        //}
 
        
     }

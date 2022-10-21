@@ -10,18 +10,18 @@ using System.Threading.Tasks;
 
 namespace LaboApiGroup_BL.Services
 {
-    public class Gift_Service : IGlobalInterfaces<int, Gift_BLL>    
+    public class Gift_Sevice : IGiftService
     {
         private readonly GiftRepo _repository;
-
-        public Gift_Service()
+        public Gift_Sevice()
         {
             _repository = new GiftRepo();
         }
+
         public bool Delete(Gift_BLL entity)
         {
             return _repository.Delete(entity.GiftRepoToGiftBLL());
-        }
+        }       
 
         public Gift_BLL Get(int id)
         {
@@ -30,7 +30,7 @@ namespace LaboApiGroup_BL.Services
 
         public IEnumerable<Gift_BLL> GetAll()
         {
-            return _repository.GetAll().Select(x => x.GiftBLLToGiftRepo());
+            return _repository.GetAll().Select(x=>x.GiftBLLToGiftRepo());
         }
 
         public int Insert(Gift_BLL entity)
@@ -41,11 +41,6 @@ namespace LaboApiGroup_BL.Services
         public bool Update(Gift_BLL data)
         {
             return _repository.Update(data.GiftRepoToGiftBLL());
-        }
-
-        public object? Update(Func<Gift_BLL> clientToGiftB)
-        {
-            throw new NotImplementedException();
-        }
+        }        
     }
 }

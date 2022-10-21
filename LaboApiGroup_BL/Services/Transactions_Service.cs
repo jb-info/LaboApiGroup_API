@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace LaboApiGroup_BL.Services
 {
-    public class Transactions_Service : IGlobalInterfaces<int, Transactions_BLL>
+    public class Transactions_Service :ITransactionsService
     {
         private TransactionRepo _repository;
         public Transactions_Service()

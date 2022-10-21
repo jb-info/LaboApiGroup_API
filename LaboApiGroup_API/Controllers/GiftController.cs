@@ -7,9 +7,9 @@ namespace LaboApiGroup_API.Controllers
 {
     public class GiftController: ControllerBase
     {
-        private readonly IGift_Service _gift_service;
+        private readonly IGiftService  _gift_service;
 
-        public GiftController(IGift_Service giftservice)
+        public GiftController(IGiftService giftservice)
         {
             _gift_service = giftservice;
 

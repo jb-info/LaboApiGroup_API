@@ -13,7 +13,6 @@ namespace LaboApiGroup_BL.Interfaces
         IEnumerable<TEntity> GetAll();
         TKey Insert(TEntity entity);
         bool Update(TEntity data);
-        bool Delete(TEntity entity);
-        object? Update(Func<Gift_BLL> clientToGiftB);
+        bool Delete(TEntity entity);        
     }
 }

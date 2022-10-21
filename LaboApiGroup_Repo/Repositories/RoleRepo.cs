@@ -44,6 +44,7 @@ namespace LaboApiGroup_Repo.Repositories
         {
             return new Role
             {
+                Id = (int)dtr["Id"],
                 Name = dtr["Name"].ToString(),
             };
         }
