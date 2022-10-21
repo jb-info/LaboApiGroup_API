@@ -6,35 +6,47 @@ using LaboApiGroup_API.Mapper;
 
 namespace LaboApiGroup_API.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class ProjectController : ControllerBase
     {
-        private readonly IGlobalInterfaces<int, Project_BLL> _global;
+        private readonly IProjectService _projectService;
 
-        public ProjectController(IGlobalInterfaces<int, Project_BLL> global)
+        public ProjectController(IProjectService projectService)
         {
-            _global = global;
+            _projectService = projectService;
         }
+
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            return Ok(_global.Get(id));
+            return Ok(_projectService.Get(id));
         }
+
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok(_global.GetAll());
+            return Ok(_projectService.GetAll());
         }      
 
         [HttpPost]
         public IActionResult Insert(Project_C project)
         {            
-            return Ok(_global.Insert(project.ClientToProjectBL()));
+            return Ok(_projectService.Insert(project.ClientToProjectBL()));
         }
 
         [HttpPut]
         public IActionResult Update(Project_C project)
         {
-            return Ok(_global.Update(project.ClientToProjectBL()));
+            return Ok(_projectService.Update(project.ClientToProjectBL()));
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            Project_C p = new();
+            p.Id = id;
+            return Ok(_projectService.Delete(p.ClientToProjectBL()));
         }
     }
 }

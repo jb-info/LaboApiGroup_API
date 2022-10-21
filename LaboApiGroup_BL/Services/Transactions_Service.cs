@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace LaboApiGroup_BL.Services
 {
-    public class Transactions_Service : IGlobalInterfaces<int, Transactions_BLL>
+    public class Transactions_Service : ITransactionService
     {
-        private TransactionRepo _repository;
+        private readonly TransactionRepo _repository;
         public Transactions_Service()
         {
             _repository = new TransactionRepo();

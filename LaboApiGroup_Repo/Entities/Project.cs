@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaboApiGroup_Repo.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LaboApiGroup_Repo.Entities
 {
-    public class Project : Interfaces.IEntity<int>
+    public class Project : IEntity<int>
     {
         public int Id { get; set; }
         public DateTime Start_Date { get; set; }

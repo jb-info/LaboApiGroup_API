@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace LaboApiGroup_BL.Services
 {
-    public class Project_Service : IGlobalInterfaces<int, Project_BLL>
+    public class Project_Service : IProjectService
     {        
         private ProjectRepo _repository;
         public Project_Service()
