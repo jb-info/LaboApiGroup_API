@@ -1,4 +1,5 @@
-﻿using LaboApiGroup_Repo.Interfaces;
+﻿using LaboApiGroup_BL.Models;
+using LaboApiGroup_Repo.Interfaces;
 
 namespace LaboApiGroup_API.Models
 {
@@ -7,5 +8,10 @@ namespace LaboApiGroup_API.Models
         public int Id { get; set; }
         public string Gift_Type { get; set; }
         public int landing { get; set; }
+
+        internal Gift_BLL ClientToGiftB()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

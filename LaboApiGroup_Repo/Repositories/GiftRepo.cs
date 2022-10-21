@@ -12,17 +12,16 @@ namespace LaboApiGroup_Repo.Repositories
 {
     public class GiftRepo : BasicRepository.BasicRepo<int, Gift>
     {
-        public GiftRepo(string entityName, string idName) : base(entityName, idName)
+        
+        public GiftRepo() : base("Gift_id", "id")
         {
         }
-
-        public int Id_Gift { get; private set; }
-        public int Landing { get; private set; }
+        
 
         public override bool Delete(Gift id)
         {
             Command cmd = new Command("P_Gift_Delete", true);
-            cmd.AddParameter("@Id_Gift", id.Id);
+            cmd.AddParameter("@Id", id.Id);
             return base.ConnectionString.ExecuteNonQuery(cmd) == 1;
             
             
@@ -32,7 +31,7 @@ namespace LaboApiGroup_Repo.Repositories
         {
             Command cmd = new Command("P_Gift_INSERT", true);
             cmd.AddParameter("@Gift_Type", entity.Gift_Type);
-            cmd.AddParameter("@Landing", entity.landing);
+            cmd.AddParameter("@landing", entity.landing);
             return base.ConnectionString.ExecuteNonQuery(cmd);
         }
 
@@ -40,8 +39,8 @@ namespace LaboApiGroup_Repo.Repositories
         {
             Command cmd = new Command("P_Gift_Update", true);
             cmd.AddParameter("Gift_Type", data.Gift_Type);
-            cmd.AddParameter("Id_Gift" , data.Id);
-            cmd.AddParameter("Landing", data.landing);
+            cmd.AddParameter("Id" , data.Id);
+            cmd.AddParameter("landing", data.landing);
             return base.ConnectionString.ExecuteNonQuery(cmd)==1;
 
         }
@@ -50,9 +49,10 @@ namespace LaboApiGroup_Repo.Repositories
         {
             return new Gift
             {
-                Id_Gift = (int)dtr[Id_Gift],
-                Gift_Type = (string)dtr[Id_Gift].ToString(),
-                Landing = (int)dtr[Landing],
+                Id= (int)dtr["Id"],
+                Gift_Type=dtr["Gift_Type"].ToString(),
+                landing=(int)dtr["landing"]
+
 
             };
             

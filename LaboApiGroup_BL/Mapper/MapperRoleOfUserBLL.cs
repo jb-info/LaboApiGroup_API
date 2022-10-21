@@ -15,8 +15,8 @@ namespace LaboApiGroup_BL.Mapper
             return new RoleOfUser_BLL()
             {
                 Id=rou_repo.Id,
-                Id_Role=rou_repo.Id,
-                Id_User=rou_repo.Id,
+                Id_Role=rou_repo.Id_Role,
+                Id_User=rou_repo.Id_User,
             };
 
 

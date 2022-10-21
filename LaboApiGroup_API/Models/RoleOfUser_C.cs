@@ -7,5 +7,6 @@ namespace LaboApiGroup_API.Models
         public int Id { get; set; }
         public int Id_User { get; set; }
         public int Id_Role { get; set; }
+        
     }
 }

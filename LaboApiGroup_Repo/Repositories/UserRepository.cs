@@ -18,7 +18,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Delete(Users id)
         {
             Command cmd = new("P_Users_Delete", true);
-            cmd.AddParameter("Id_Users", id.Id);
+            cmd.AddParameter("Id", id.Id);
             return base.ConnectionString.ExecuteNonQuery(cmd)==1;
         }
 
@@ -28,7 +28,7 @@ namespace LaboApiGroup_Repo.Repositories
             cmd.AddParameter("NickName", entity.NickName);
             cmd.AddParameter("BirthDate", entity.BirthDate);
             cmd.AddParameter("Email", entity.Email);
-            cmd.AddParameter("PassWord",entity.PassWord);
+            cmd.AddParameter("Id",entity.Id);
             return (Guid)base.ConnectionString.ExecuteScalar(cmd);
 
         }
@@ -36,10 +36,10 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Update(Users data)
         {
             Command cmd = new("P_Users_UPDATE", true);
-            cmd.AddParameter("NickName", data.NickName);
-            cmd.AddParameter("BirthDate", data.BirthDate);
+            cmd.AddParameter("Id", data.Id);
             cmd.AddParameter("Email", data.Email);
-            cmd.AddParameter("PassWord", data.PassWord);
+            cmd.AddParameter("BirthDate", data.BirthDate);
+            cmd.AddParameter("NickName", data.NickName);
             return base.ConnectionString.ExecuteNonQuery(cmd)==1;
 
         }
@@ -56,8 +56,8 @@ namespace LaboApiGroup_Repo.Repositories
         {
             return new Users()
             {
-                Id = Guid.Parse(dtr["Id_User"].ToString()),
-                Email = dtr["email"].ToString(),
+                Id = (Guid)dtr["Id"],
+                Email = dtr["Email"].ToString(),
                 NickName = dtr["Nickname"].ToString(),
                 BirthDate = (DateTime)dtr["Birthdate"]
             };

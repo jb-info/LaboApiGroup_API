@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LaboApiGroup_BL.Models
 {
-    public class Project_BLL : IEntity<int> 
+    public class Project_BLL : IEntity<int>
     {
         public int Id { get; set; }
         public DateTime Start_Date { get; set; }

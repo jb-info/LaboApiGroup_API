@@ -1,10 +1,10 @@
 ﻿CREATE PROCEDURE [dbo].[P_Gift_INSERT]
 	@Gift_Type VARCHAR(50),
-	@Landing int
+	@landing int
 AS
 BEGIN
 
-	INSERT INTO Gift (Gift_Type, Landing)
-	VALUES(@Gift_Type, @Landing)
+	INSERT INTO Gift (Gift_Type, landing)
+	VALUES(@Gift_Type, @landing)
 
 END
