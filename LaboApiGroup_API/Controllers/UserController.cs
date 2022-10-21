@@ -33,6 +33,13 @@ namespace LaboApiGroup_API.Controllers
             return Ok(_userService.Get(id));
         }
 
+        [HttpPost]
+        [Route("Login")]
+        public IActionResult Login([FromBody] Users_C u)
+        {
+            return Ok(_userService.Login(u.ClientToUserBL()));
+        }
+
         // POST api/<UserController>
         [HttpPost]
         public IActionResult Post([FromBody] Users_C u)

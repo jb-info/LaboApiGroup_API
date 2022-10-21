@@ -19,7 +19,7 @@ BEGIN
 	SET @Password_hash = HASHBYTES('SHA2_512', CONCAT(@Salt, @Password, @Secret, @Salt));
 
 	-- Ajout de l'utilisateur dans la DB avec le mot de passe hashé
-	INSERT INTO [dbo].[Users] ([Email], [Nickname], [Birthdate], [Pwd], [Salt])
+	INSERT INTO [dbo].[Users] ([email], [Nickname], [Birthdate], [Pwd], [Salt])
 	 OUTPUT [inserted].[Id_User]
 	 VALUES (@Email, @NickName,  @Birthdate ,@Password_hash, @Salt);
 END

@@ -44,6 +44,14 @@ namespace LaboApiGroup_Repo.Repositories
 
         }
 
+        public Users Login(Users u)
+        {
+            Command cmd = new("P_Users_Login", true);
+            cmd.AddParameter("email", u.Email);
+            cmd.AddParameter("Password", u.PassWord);
+            return base.ConnectionString.ExecuteReader(cmd, Convert).SingleOrDefault();
+        }
+
         protected override Users Convert(IDataRecord dtr)
         {
             return new Users()

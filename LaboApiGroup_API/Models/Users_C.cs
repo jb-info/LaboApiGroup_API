@@ -12,4 +12,17 @@ namespace LaboApiGroup_API.Models
         public bool IsAdmin { get; set; }
         public bool IsActive { get; set; }
     }
+
+    public class Login_User
+    {
+        public int Email { get; set; }
+        public int Password { get; set; }
+    }
+   public class UserWithToken
+    {
+        public string NickName { get; set; }
+        public bool IsAdmin { get; set; }
+        public Role_C Role { get; set; }
+        public string Token { get; set; }
+    }
 }

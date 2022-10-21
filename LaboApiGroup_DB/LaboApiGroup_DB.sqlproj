@@ -61,6 +61,10 @@
     <Folder Include="StoredProcedure" />
     <Folder Include="Triggers" />
     <Folder Include="Fonctions" />
+    <Folder Include="StoredProcedure\Users" />
+    <Folder Include="StoredProcedure\Gift" />
+    <Folder Include="StoredProcedure\Role" />
+    <Folder Include="StoredProcedure\Project" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Table\Project.sql" />
@@ -71,20 +75,21 @@
     <Build Include="Table\RoleOfUser.sql" />
     <Build Include="Table\GiftOfProject.sql" />
     <Build Include="Table\Transaction.sql" />
-    <Build Include="StoredProcedure\P_Gift_DELETE.sql" />
-    <Build Include="StoredProcedure\P_Gift_INSERT.sql" />
     <Build Include="Views\V_Gift.sql" />
-    <Build Include="StoredProcedure\P_Gift_UPDATE.sql" />
-    <Build Include="StoredProcedure\P_Project_DELETE.sql" />
-    <Build Include="StoredProcedure\P_Project_INSERT.sql" />
-    <Build Include="StoredProcedure\P_Project_UPDATE.sql" />
-    <Build Include="StoredProcedure\P_Role_DELETE.sql" />
-    <Build Include="StoredProcedure\P_Role_INSERT.sql" />
-    <Build Include="StoredProcedure\P_Role_UPDATE.sql" />
     <Build Include="Views\V_Project.sql" />
     <Build Include="Views\V_Role.sql" />
-    <Build Include="StoredProcedure\P_Users_Add.sql" />
     <Build Include="Fonctions\GetSecretKey.sql" />
+    <Build Include="StoredProcedure\Gift\P_Gift_UPDATE.sql" />
+    <Build Include="StoredProcedure\Gift\P_Gift_DELETE.sql" />
+    <Build Include="StoredProcedure\Gift\P_Gift_INSERT.sql" />
+    <Build Include="StoredProcedure\Role\P_Role_DELETE.sql" />
+    <Build Include="StoredProcedure\Role\P_Role_INSERT.sql" />
+    <Build Include="StoredProcedure\Role\P_Role_UPDATE.sql" />
+    <Build Include="StoredProcedure\Project\P_Project_DELETE.sql" />
+    <Build Include="StoredProcedure\Project\P_Project_INSERT.sql" />
+    <Build Include="StoredProcedure\Project\P_Project_UPDATE.sql" />
+    <Build Include="StoredProcedure\Users\P_Users_Login.sql" />
+    <Build Include="StoredProcedure\Users\P_Users_Add.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LaboApiGroup_DB.publish.xml" />

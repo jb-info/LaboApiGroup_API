@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LaboApiGroup_BL.Mapper;
+using LaboApiGroup_Repo.Entities;
 
 namespace LaboApiGroup_BL.Services
 {
@@ -36,6 +37,11 @@ namespace LaboApiGroup_BL.Services
         public Guid Insert(Users_BLL entity)
         {
             return _repo.Insert(entity.ToRepo());
+        }
+
+        public Users Login(Users_BLL u)
+        {
+            return _repo.Login(u.ToRepo());
         }
 
         public bool Update(Users_BLL data)
