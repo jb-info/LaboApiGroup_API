@@ -11,24 +11,24 @@ namespace LaboApiGroup_Repo.Repositories
 {
     public class UserRepository : BasicRepository.BasicRepo<Guid, Users>
     {
-        public UserRepository() : base("Users", "Id_Users")
+        public UserRepository() : base("Users", "Id_User")
         {           
         }
 
         public override bool Delete(Users id)
         {
             Command cmd = new("P_Users_Delete", true);
-            cmd.AddParameter("Id", id.Id);
+            cmd.AddParameter("Id_User", id.Id);
             return base.ConnectionString.ExecuteNonQuery(cmd)==1;
         }
 
         public override Guid Insert(Users entity)
         {
             Command cmd = new("P_Users_Add", true);
+            cmd.AddParameter("Email", entity.Email);
             cmd.AddParameter("NickName", entity.NickName);
             cmd.AddParameter("BirthDate", entity.BirthDate);
-            cmd.AddParameter("Email", entity.Email);
-            cmd.AddParameter("Id",entity.Id);
+            cmd.AddParameter("Password", entity.PassWord);
             return (Guid)base.ConnectionString.ExecuteScalar(cmd);
 
         }
@@ -36,11 +36,11 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Update(Users data)
         {
             Command cmd = new("P_Users_UPDATE", true);
-            cmd.AddParameter("Id", data.Id);
-            cmd.AddParameter("Email", data.Email);
-            cmd.AddParameter("BirthDate", data.BirthDate);
             cmd.AddParameter("NickName", data.NickName);
-            return base.ConnectionString.ExecuteNonQuery(cmd)==1;
+            cmd.AddParameter("BirthDate", data.BirthDate);
+            cmd.AddParameter("Email", data.Email);
+            cmd.AddParameter("Password", data.PassWord);
+            return base.ConnectionString.ExecuteNonQuery(cmd) == 1;
 
         }
 
@@ -56,8 +56,8 @@ namespace LaboApiGroup_Repo.Repositories
         {
             return new Users()
             {
-                Id = (Guid)dtr["Id"],
-                Email = dtr["Email"].ToString(),
+                Id = Guid.Parse(dtr["Id_User"].ToString()),
+                Email = dtr["email"].ToString(),
                 NickName = dtr["Nickname"].ToString(),
                 BirthDate = (DateTime)dtr["Birthdate"]
             };

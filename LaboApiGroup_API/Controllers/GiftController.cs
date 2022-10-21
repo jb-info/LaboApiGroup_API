@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LaboApiGroup_API.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]   
     public class GiftController: ControllerBase
     {
         private readonly IGiftService  _gift_service;
