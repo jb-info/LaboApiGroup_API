@@ -16,19 +16,7 @@ namespace LaboApiGroup_Repo.Repositories
         }
 
 
-        protected override Project Convert(IDataRecord dtr)
-        {
-            return new Project
-            {
-                Id = (int)dtr["id"],
-                Start_Date = (DateTime)dtr["Start_Date"],
-                End_Date = (DateTime)dtr["End_Date"],
-                Description = dtr["Description"].ToString(),
-                Title = dtr["Description"].ToString(),
-                Financial_Targets = (int)dtr["Financial_Targets"],
-                Earn_Money = (int)dtr["Earn_Money"]
-            };
-        }
+    
         
         public override bool Delete(Project id)
         {
@@ -60,19 +48,21 @@ namespace LaboApiGroup_Repo.Repositories
             cmd.AddParameter("@Earn_Money", data.Earn_Money);            
             return ConnectionString.ExecuteNonQuery(cmd) == 1;
         }
+        protected override Project Convert(IDataRecord dtr)
+        {
+            return new Project
+            {
+                Id = (int)dtr["id"],
+                Start_Date = (DateTime)dtr["Start_Date"],
+                End_Date = (DateTime)dtr["End_Date"],
+                Description = dtr["Description"].ToString(),
+                Title = dtr["Description"].ToString(),
+                Financial_Targets = (int)dtr["Financial_Targets"],
+                Earn_Money = (int)dtr["Earn_Money"]
+            };
+        }
 
-        //protected override Project Convert(IDataRecord dtr)
-        //{
-                
-        //    return new Project
-        //    {
-                
-        //        Start_Date = (DateTime)dtr
 
 
-        //    };
-        //}
-
-       
     }
 }
