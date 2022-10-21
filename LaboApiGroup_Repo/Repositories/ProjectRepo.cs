@@ -11,7 +11,7 @@ namespace LaboApiGroup_Repo.Repositories
 {
     public class ProjectRepo : BasicRepository.BasicRepo<int , Project>
     {
-        public ProjectRepo() : base("Project", "Id")
+        public ProjectRepo() : base("Project", "Id_Project")
         {
         }
 
@@ -19,7 +19,7 @@ namespace LaboApiGroup_Repo.Repositories
         {
             return new Project
             {
-                Id = (int)dtr["id"],
+                Id = (int)dtr["Id_Project"],
                 Start_Date = (DateTime)dtr["Start_Date"],
                 End_Date = (DateTime)dtr["End_Date"],
                 Description = dtr["Description"].ToString(),
@@ -31,8 +31,8 @@ namespace LaboApiGroup_Repo.Repositories
         
         public override bool Delete(Project id)
         {
-            Command cmd = new Command("P_Project_Delete", true);
-            cmd.AddParameter("@id", id.Id);            
+            Command cmd = new Command("P_Project_DELETE", true);
+            cmd.AddParameter("@Id_Project", id.Id);            
             return ConnectionString.ExecuteNonQuery(cmd) == 1;
         }
 
@@ -51,6 +51,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Update(Project data)
         {
             Command cmd = new Command("P_Project_Update", true);
+            cmd.AddParameter("@Id_Project", data.Id);
             cmd.AddParameter("@Start_Date", data.Start_Date);
             cmd.AddParameter("@End_Date", data.End_Date);
             cmd.AddParameter("@Description", data.Description);
@@ -58,8 +59,6 @@ namespace LaboApiGroup_Repo.Repositories
             cmd.AddParameter("@Financial_Targets", data.Financial_Targets);
             cmd.AddParameter("@Earn_Money", data.Earn_Money);            
             return ConnectionString.ExecuteNonQuery(cmd) == 1;
-        }
-
-       
+        }      
     }
 }

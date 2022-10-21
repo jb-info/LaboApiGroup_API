@@ -18,15 +18,16 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Delete(Transactions id)
         {
             Command cmd = new Command("DELETE FROM [Transaction] WHERE Id = @id");
-            cmd.AddParameter("id", id);
+            cmd.AddParameter("id", id.Id);
             return ConnectionString.ExecuteNonQuery(cmd) == 1;
         }
 
         public override int Insert(Transactions entity)
         {
-            Command cmd = new Command("INSERT INTO [Transaction](Amount,Date_Transaction)OUTPUT INSERTED.Id VALUES(@p1, @p2)");
+            Command cmd = new Command("INSERT INTO [Transaction](Amount,Date_Transaction,Id_User)OUTPUT INSERTED.Id VALUES(@p1, @p2, @p3)");
             cmd.AddParameter("p1", entity.Amount);
             cmd.AddParameter("p2", entity.Date_Transaction);
+            cmd.AddParameter("p3", entity.Id_User);
 
             return base.ConnectionString.ExecuteNonQuery(cmd);
         }
@@ -37,7 +38,7 @@ namespace LaboApiGroup_Repo.Repositories
             
 
             cmd.AddParameter("Amount", data.Amount);
-            cmd.AddParameter("date", data.Date_Transaction);
+            cmd.AddParameter("Date_Transaction", data.Date_Transaction);
             cmd.AddParameter("id", data.Id);
 
             return base.ConnectionString.ExecuteNonQuery(cmd) == 1;
@@ -48,7 +49,7 @@ namespace LaboApiGroup_Repo.Repositories
             return new Transactions()
             {
                 Id = (int)dtr["Id"],
-                Id_Project = (int)dtr["Id_Project"],
+                Id_Project = dtr["Id_Project"]== DBNull.Value? 0 : (int)dtr["Id_Project"],
                 Id_User = Guid.Parse(dtr["Id_User"].ToString()),
                 Amount = (int)dtr["Amount"],
                 Date_Transaction = (DateTime)dtr["Date_Transaction"]

@@ -37,5 +37,13 @@ namespace LaboApiGroup_API.Controllers
         {
             return Ok(_transactionService.Update(transaction.transactions_BL()));
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            Transactions_C t = new();
+            t.Id = id;
+            return Ok(_transactionService.Delete(t.transactions_BL()));
+        }
     }
 }
