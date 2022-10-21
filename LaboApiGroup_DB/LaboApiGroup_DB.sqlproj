@@ -61,6 +61,11 @@
     <Folder Include="StoredProcedure" />
     <Folder Include="Triggers" />
     <Folder Include="Fonctions" />
+    <Folder Include="StoredProcedure\Gift" />
+    <Folder Include="StoredProcedure\Project" />
+    <Folder Include="StoredProcedure\Role" />
+    <Folder Include="StoredProcedure\Users" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Table\Project.sql" />
@@ -94,6 +99,18 @@
     <Build Include="StoredProcedure\P_RoleOfUser_DELETE.sql" />
     <Build Include="StoredProcedure\P_RoleOfUser_INSERT.sql" />
     <Build Include="StoredProcedure\P_RoleOfUser_UPDATE.sql" />
+    <Build Include="StoredProcedure\Gift\P_Gift_DELETE.sql" />
+    <Build Include="StoredProcedure\Gift\P_Gift_INSERT.sql" />
+    <Build Include="StoredProcedure\Gift\P_Gift_UPDATE.sql" />
+    <Build Include="StoredProcedure\Project\P_Project_DELETE.sql" />
+    <Build Include="StoredProcedure\Project\P_Project_INSERT.sql" />
+    <Build Include="StoredProcedure\Project\P_Project_UPDATE.sql" />
+    <Build Include="StoredProcedure\Role\P_Role_DELETE.sql" />
+    <Build Include="StoredProcedure\Role\P_Role_INSERT.sql" />
+    <Build Include="StoredProcedure\Role\P_Role_UPDATE.sql" />
+    <Build Include="StoredProcedure\Users\P_Users_Add.sql" />
+    <Build Include="StoredProcedure\Users\P_Users_Login.sql" />
+    <Build Include="Scripts\Script.PostDeployment1.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LaboApiGroup_DB.publish.xml" />
