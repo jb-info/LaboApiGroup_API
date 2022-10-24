@@ -15,7 +15,7 @@ namespace LaboApiGroup_API.Mapper
                 Id_User=up_BLL.Id,
             };
         }
-        public static UsersInProject_BLL ClientToUsersInProjectBL(this UserInProject_C  userinproject_C )
+        public static UsersInProject_BLL ToBLL(this UserInProject_C  userinproject_C )
         {
             return new UsersInProject_BLL()
             {
