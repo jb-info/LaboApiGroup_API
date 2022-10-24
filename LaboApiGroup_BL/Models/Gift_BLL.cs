@@ -11,6 +11,6 @@ namespace LaboApiGroup_BL.Models
     {
         public int Id { get; set; }
         public string Gift_Type { get; set; }
-        public int landing { get; set; }
+        public int Landing { get; set; }
     }
 }

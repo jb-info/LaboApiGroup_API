@@ -35,6 +35,3 @@ namespace LaboApiGroup_API.Mapper
 }
 
 
-//public int Id { get; set; }
-//public int Id_Project { get; set; }
-//public int Id_Gift { get; set; }

@@ -9,4 +9,5 @@ Modèle de script de post-déploiement
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-insert into  [Role] values ('coucou')
+
+--/INSERT INTO [dbo].[Role] (Name) VALUES ('coucou')

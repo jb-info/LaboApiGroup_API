@@ -11,7 +11,7 @@ namespace LaboApiGroup_API.Mapper
             {
                 Id = gift_BLL.Id,
                 Gift_Type = gift_BLL.Gift_Type,
-                landing = gift_BLL.landing
+                Landing = gift_BLL.Landing
             };
         }
 
@@ -21,7 +21,7 @@ namespace LaboApiGroup_API.Mapper
             {
                 Id = gift_C.Id,
                 Gift_Type = gift_C.Gift_Type,
-                landing = gift_C.landing
+                Landing = gift_C.Landing
             };
         }
     }

@@ -13,7 +13,7 @@ namespace LaboApiGroup_BL.Services
 {
     public class Project_Service : IProjectService
     {        
-        private ProjectRepo _repository;
+        private readonly ProjectRepo _repository;
         public Project_Service()
         {
             _repository =  new ProjectRepo();

@@ -17,6 +17,8 @@ builder.Services.AddScoped<IUserService, User_Service>();
 builder.Services.AddScoped<ITransactionService, Transactions_Service>();
 builder.Services.AddScoped<IProjectService, Project_Service>();
 builder.Services.AddScoped<IRoleService, Role_Service>();
+builder.Services.AddScoped<IGiftService, Gift_Sevice>();
+builder.Services.AddScoped<IGiftOfProjectService, GiftOfProject_Service>();
 
 // Config du JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

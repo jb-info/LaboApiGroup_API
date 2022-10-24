@@ -16,7 +16,7 @@ namespace LaboApiGroup_BL.Mapper
             {
                 Id = gf_Repo.Id,
                 Gift_Type = gf_Repo.Gift_Type,
-                landing = gf_Repo.landing,
+                Landing = gf_Repo.Landing,
 
             };
 
@@ -30,7 +30,7 @@ namespace LaboApiGroup_BL.Mapper
             {
                 Id = gift_bll.Id,
                 Gift_Type = gift_bll.Gift_Type,
-                landing = gift_bll.landing,
+                Landing = gift_bll.Landing,
             }; 
 
         }

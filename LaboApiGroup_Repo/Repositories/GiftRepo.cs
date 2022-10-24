@@ -13,7 +13,7 @@ namespace LaboApiGroup_Repo.Repositories
     public class GiftRepo : BasicRepository.BasicRepo<int, Gift>
     {
         
-        public GiftRepo() : base("Gift_id", "id")
+        public GiftRepo() : base("Gift", "id_Gift")
         {
         }
         
@@ -21,7 +21,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Delete(Gift id)
         {
             Command cmd = new Command("P_Gift_Delete", true);
-            cmd.AddParameter("@Id", id.Id);
+            cmd.AddParameter("@Id_Gift", id.Id);
             return base.ConnectionString.ExecuteNonQuery(cmd) == 1;
             
             
@@ -29,29 +29,29 @@ namespace LaboApiGroup_Repo.Repositories
 
         public override int Insert(Gift entity)
         {
-            Command cmd = new Command("P_Gift_INSERT", true);
+            Command cmd = new Command("P_Gift_Add",true);
             cmd.AddParameter("@Gift_Type", entity.Gift_Type);
-            cmd.AddParameter("@landing", entity.landing);
+            cmd.AddParameter("@landing", entity.Landing);
             return base.ConnectionString.ExecuteNonQuery(cmd);
         }
 
         public override bool Update(Gift data)
         {
-            Command cmd = new Command("P_Gift_Update", true);
+            Command cmd = new Command("P_Gift_UPDATE",true);
+            cmd.AddParameter("Id_Gift", data.Id);
             cmd.AddParameter("Gift_Type", data.Gift_Type);
-            cmd.AddParameter("Id" , data.Id);
-            cmd.AddParameter("landing", data.landing);
+            cmd.AddParameter("landing", data.Landing);
             return base.ConnectionString.ExecuteNonQuery(cmd)==1;
 
         }
 
         protected override Gift Convert(IDataRecord dtr)
         {
-            return new Gift
+            return new Gift()
             {
-                Id= (int)dtr["Id"],
+                Id= (int)dtr["Id_Gift"],
                 Gift_Type=dtr["Gift_Type"].ToString(),
-                landing=(int)dtr["landing"]
+                Landing=(int)dtr["landing"]
 
 
             };

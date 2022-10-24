@@ -40,7 +40,15 @@ namespace LaboApiGroup_API.Controllers
             return Ok(_gift_service.Update(Gift.ClientToGiftBl()));
         }
 
-        
+        [HttpDelete]
+
+        public IActionResult Delete(int id)
+        {
+            Gift_C g = new();
+            g.Id = id;
+            return Ok(_gift_service.Delete(g.ClientToGiftBl()));
+        }
+            
 
     }
     

@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[P_RoleOfUser_INSERT]
-	@Id int,
+	@Id uniqueidentifier,
 	@Id_User int,
 	@Id_Role int
 AS
