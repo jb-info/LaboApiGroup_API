@@ -15,11 +15,12 @@ namespace LaboApiGroup_API.Models
 
     public class Login_User
     {
-        public int Email { get; set; }
-        public int Password { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
    public class UserWithToken
     {
+        public Guid Guid { get; set; }
         public string NickName { get; set; }
         public bool IsAdmin { get; set; }
         public Role_C Role { get; set; }

@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LaboApiGroup_Repo\LaboApiGroup_Repo.csproj" />
+    <Compile Remove="InterfacesBLL\**" />
+    <EmbeddedResource Remove="InterfacesBLL\**" />
+    <None Remove="InterfacesBLL\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="InterfacesBLL\" />
+    <ProjectReference Include="..\LaboApiGroup_Repo\LaboApiGroup_Repo.csproj" />
   </ItemGroup>
 
 </Project>

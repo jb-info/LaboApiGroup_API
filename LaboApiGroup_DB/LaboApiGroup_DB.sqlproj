@@ -104,6 +104,7 @@
     <Build Include="StoredProcedure\Transaction\P_Transaction_DELETE.sql" />
     <Build Include="StoredProcedure\Transaction\P_Transaction_INSERT.sql" />
     <Build Include="StoredProcedure\Transaction\P_Transaction_UPDATE.sql" />
+    <Build Include="Triggers\Trigger1.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LaboApiGroup_DB.publish.xml" />

@@ -39,9 +39,9 @@ namespace LaboApiGroup_BL.Services
             return _repo.Insert(entity.ToRepo());
         }
 
-        public Users Login(Users_BLL u)
+        public Users_BLL Login(Users_BLL u)
         {
-            return _repo.Login(u.ToRepo());
+            return _repo.Login(u.ToRepo()).ToBLL();
         }
 
         public bool Update(Users_BLL data)

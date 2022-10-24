@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[P_Transaction_UPDATE]
 	@Id int,
 	@Id_Project int,
-	@Id_User int,
+	@Id_User uniqueidentifier,
 	@Amount int,
 	@Date_Transaction date
 AS

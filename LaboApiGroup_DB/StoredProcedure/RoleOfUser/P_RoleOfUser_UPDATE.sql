@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[P_RoleOfUser_UPDATE]
 	@Id int ,
-	@Id_User int,
+	@Id_User uniqueidentifier,
 	@Id_Role int
 AS
 BEGIN

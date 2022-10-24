@@ -10,6 +10,6 @@ namespace LaboApiGroup_BL.Interfaces
 {
     public interface IUserService : IGlobalInterfaces<Guid, Users_BLL>
     {
-        public Users Login(Users_BLL u);
+        public Users_BLL Login(Users_BLL u);
     }
 }
