@@ -18,19 +18,31 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Delete(Users id)
         {
             Command cmd = new("P_Users_Delete", true);
-            cmd.AddParameter("Id_User", id.Id);
+            cmd.AddParameter("Id", id.Id);
             return base.ConnectionString.ExecuteNonQuery(cmd)==1;
         }
 
         public override Guid Insert(Users entity)
         {
-            Command cmd = new("P_Users_Add", true);
+            Command cmd = new("P_Admin_UserAdd", true);
             cmd.AddParameter("Email", entity.Email);
             cmd.AddParameter("NickName", entity.NickName);
             cmd.AddParameter("BirthDate", entity.BirthDate);
             cmd.AddParameter("Password", entity.PassWord);
+            cmd.AddParameter("IsAdmin",entity.IsAdmin);
+            cmd.AddParameter("IsActive",entity.IsActive);
             return (Guid)base.ConnectionString.ExecuteScalar(cmd);
 
+        }
+
+        public Guid Register(Users u)
+        {
+            Command cmd = new("P_Users_Add", true);
+            cmd.AddParameter("Email", u.Email);
+            cmd.AddParameter("NickName", u.NickName);
+            cmd.AddParameter("BirthDate", u.BirthDate);
+            cmd.AddParameter("Password", u.PassWord);
+            return (Guid)base.ConnectionString.ExecuteScalar(cmd);
         }
 
         public override bool Update(Users data)
@@ -59,7 +71,9 @@ namespace LaboApiGroup_Repo.Repositories
                 Id = Guid.Parse(dtr["Id_User"].ToString()),
                 Email = dtr["email"].ToString(),
                 NickName = dtr["Nickname"].ToString(),
-                BirthDate = (DateTime)dtr["Birthdate"]
+                BirthDate = (DateTime)dtr["Birthdate"],
+                IsAdmin = (bool)dtr["IsAdmin"],
+                IsActive = (bool)dtr["IsActive"]
             };
         }
     }

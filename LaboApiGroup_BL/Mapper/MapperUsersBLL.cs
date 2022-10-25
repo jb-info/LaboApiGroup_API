@@ -18,6 +18,8 @@ namespace LaboApiGroup_BL.Mapper
                 BirthDate = us_repo.BirthDate,
                 Email = us_repo.Email,
                 NickName = us_repo.NickName,
+                IsAdmin = us_repo.IsAdmin,
+                IsActive = us_repo.IsActive
             };
         }
         public static Users ToRepo(this Users_BLL us )
@@ -29,6 +31,8 @@ namespace LaboApiGroup_BL.Mapper
                 BirthDate = us.BirthDate,
                 Email = us.Email,
                 PassWord = us.PassWord,
+                IsAdmin = us.IsAdmin,
+                IsActive = us.IsActive
             };
         }
     }

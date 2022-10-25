@@ -27,6 +27,7 @@ namespace LaboApiGroup_API.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
+            if (_userService.GetAll() == null) throw new Exception("Empty data");
             return Ok(_userService.GetAll());
         }
 
@@ -34,7 +35,10 @@ namespace LaboApiGroup_API.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
-            return Ok(_userService.Get(id));
+            if (id == null) throw new Exception("Id is null");
+            else if (!ModelState.IsValid) throw new Exception("Model is not Valid");
+            else
+                return Ok(_userService.Get(id));
         }
 
         [HttpPost]
@@ -62,8 +66,12 @@ namespace LaboApiGroup_API.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Users_C u)
         {
-            return Ok(_userService.Insert(u.ToBll()));
+            if (u is null || !ModelState.IsValid) return BadRequest();
+            else
+                return Ok(_userService.Insert(u.ToBll()));
         }
+
+
 
         // PUT api/<UserController>/5
         [HttpPut("{id}")]
@@ -73,8 +81,11 @@ namespace LaboApiGroup_API.Controllers
 
         // DELETE api/<UserController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(Guid id)
         {
+            if (id == null) throw new Exception("L'id est null");
+            else 
+                return Ok(_userService.Delete(new Users_BLL() { Id = id}));
         }
     }
 }
