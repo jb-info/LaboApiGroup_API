@@ -28,7 +28,6 @@ namespace LaboApiGroup_BL.Services
         {
             return _repository.Get(id).ToREPO();
         }
-
         public IEnumerable<Project_BLL> GetAll()
         {
             return _repository.GetAll().Select(x => x.ToREPO());

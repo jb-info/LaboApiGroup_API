@@ -24,10 +24,11 @@ namespace LaboApiGroup_Repo.Repositories
 
         public override int Insert(Transactions entity)
         {
-            Command cmd = new Command("INSERT INTO [Transaction](Amount,Date_Transaction,Id_User)OUTPUT INSERTED.Id VALUES(@p1, @p2, @p3)");
+            Command cmd = new Command("INSERT INTO [Transaction](Amount,Date_Transaction,Id_User, Id_Project)OUTPUT INSERTED.Id VALUES(@p1, @p2, @p3, @p4)");
             cmd.AddParameter("p1", entity.Amount);
             cmd.AddParameter("p2", entity.Date_Transaction);
             cmd.AddParameter("p3", entity.Id_User);
+            cmd.AddParameter("p4", entity.Id_Project);
 
             return base.ConnectionString.ExecuteNonQuery(cmd);
         }

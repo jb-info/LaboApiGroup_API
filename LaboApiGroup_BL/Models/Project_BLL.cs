@@ -17,4 +17,8 @@ namespace LaboApiGroup_BL.Models
         public int Financial_Targets { get; set; }
         public int Earn_Money { get; set; }
     }
+    public class FullProject : Project_BLL
+    {
+
+    }
 }

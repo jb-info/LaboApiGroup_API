@@ -13,7 +13,7 @@ namespace LaboApiGroup_Repo.Repositories.BasicRepository
     public abstract class BasicRepo<TKey, TEntity> : IRepository<TKey, TEntity>
         where TEntity : IEntity<TKey>
     {
-        private string connexion = @"Data Source=DESKTOP-Q65J50R\SQLEXPRESS;Initial Catalog=LaboApiGroup_DB;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private string connexion = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LaboApiGroup_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         protected Connection ConnectionString { get; }
         protected string EntityName { get; }

@@ -18,7 +18,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Delete(GiftOfProject id)
         {
             Command cmd = new Command("P_GiftOfProject_DELETE", true);
-            cmd.AddParameter("id", id.Id);
+            cmd.AddParameter("Id", id.Id);
             return base.ConnectionString.ExecuteNonQuery(cmd) == 1;
         }
 
@@ -33,7 +33,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Update(GiftOfProject data)
         {
             Command cmd = new Command("P_GiftOfProject_UPDATE", true);
-            cmd.AddParameter("id", data.Id);
+            cmd.AddParameter("Id", data.Id);
             cmd.AddParameter("Id_Project", data.Id_Project);
             cmd.AddParameter("Id_Gift", data.Id_Gift);
             return base.ConnectionString.ExecuteNonQuery(cmd) == 1;
@@ -45,7 +45,7 @@ namespace LaboApiGroup_Repo.Repositories
             {
                 Id = (int)dtr["Id"],
                 Id_Gift = (int)dtr["Id_Gift"],
-                Id_Project = (int)dtr["Id_¨Project"]
+                Id_Project = (int)dtr["Id_Project"]
             };
         }
     }
