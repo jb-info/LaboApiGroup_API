@@ -22,6 +22,8 @@ namespace LaboApiGroup_API.Controllers
             _TokenManager = jwtTokenManager;
         }
 
+        [HttpPost]
+        [Route("SwitchUserStatus")]
         public IActionResult SwitchStatus([FromBody] SwitchUser su)
         {
             return Ok(_userService.SwitchStatus(su.SwtichUserToBll()));
