@@ -33,7 +33,7 @@ namespace LaboApiGroup_API.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            if (_userService.GetAll() == null) throw new Exception("Empty data");
+            if (_userService.GetAll() == null) return BadRequest("Empty");
             return Ok(_userService.GetAll());
         }
 
@@ -41,10 +41,10 @@ namespace LaboApiGroup_API.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
-            if (id == null) throw new Exception("Id is null");
-            else if (!ModelState.IsValid) throw new Exception("Model is not Valid");
+            Users_C c = _userService.Get(id).ToClient();
+            if (c is null) return BadRequest("Empty");
             else
-                return Ok(_userService.Get(id));
+                return Ok(c);
         }
 
         [HttpPost]
@@ -89,9 +89,9 @@ namespace LaboApiGroup_API.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
-            if (id == null) throw new Exception("L'id est null");
+            if (_userService.Delete(new Users_BLL() { Id = id })) return new ForbidResult();
             else 
-                return Ok(_userService.Delete(new Users_BLL() { Id = id}));
+                return Ok();
         }
     }
 }
