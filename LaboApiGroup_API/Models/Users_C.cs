@@ -35,7 +35,9 @@ namespace LaboApiGroup_API.Models
     }
     public class SwitchUser
     {
+        [Required]
         public Guid Id_User { get; set; }
+        [Required]
         public bool Status { get; set; }
     }
 }
