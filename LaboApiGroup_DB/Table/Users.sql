@@ -6,8 +6,8 @@
    Pwd			INT,
    Birthdate	DATE				NOT NULL,
    [Salt]		NVARCHAR(100)		NOT NULL,
-   IsAdmin		bit default(0),
-   IsActive		bit default(1)
+   IsAdmin		bit default(0)		NOT NULL,
+   IsActive		bit default(1)		NOT NULL
 
    PRIMARY KEY(Id_User),
    UNIQUE(email)

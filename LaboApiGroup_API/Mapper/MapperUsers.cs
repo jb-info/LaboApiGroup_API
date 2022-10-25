@@ -13,6 +13,8 @@ namespace LaboApiGroup_API.Mapper
                 NickName = u_BLL.NickName,
                 Email = u_BLL.Email,
                 BirthDate = u_BLL.BirthDate,
+                IsAdmin = u_BLL.IsAdmin,
+                IsActive = u_BLL.IsActive,
             };
         }
 
@@ -25,7 +27,8 @@ namespace LaboApiGroup_API.Mapper
                 Email = users_C.Email,
                 BirthDate = users_C.BirthDate,
                 PassWord = users_C.PassWord,
-                
+                IsAdmin = users_C.IsAdmin,
+                IsActive = users_C.IsActive,  
             };
         }
 
@@ -45,6 +48,15 @@ namespace LaboApiGroup_API.Mapper
                 Guid = users_C.Id,
                 NickName = users_C.NickName,
                 IsAdmin = users_C.IsAdmin
+            };
+        }
+
+        public static Users_BLL SwtichUserToBll(this SwitchUser su)
+        {
+            return new Users_BLL()
+            {
+                IsActive = su.Status,
+                Id = su.Id_User
             };
         }
 
