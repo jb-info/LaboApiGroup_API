@@ -10,7 +10,7 @@ namespace LaboApiGroup_BL.Mapper
 {
     public static class MapperUsersInProjectBLL
     {
-        public static UsersInProject_BLL UIP_BLLtoUIP_REPO(this UserInProject uip_repo)
+        public static UsersInProject_BLL ToBLL(this UserInProject uip_repo)
         {
             return new UsersInProject_BLL()
             {
@@ -19,7 +19,7 @@ namespace LaboApiGroup_BL.Mapper
                 Id_User = uip_repo.Id_User,
             };
         }
-        public static UserInProject UIP_REPOtoUIP_REPO(this UsersInProject_BLL uip)
+        public static UserInProject ToREPO(this UsersInProject_BLL uip)
         {
             return new UserInProject()
             {
