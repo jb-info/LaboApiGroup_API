@@ -10,7 +10,7 @@ namespace LaboApiGroup_BL.Mapper
 {
     public static class MapperRoleBLL
     {
-        public static Role_BLL R_BLLtoR_REPO(this Role r_repo )
+        public static Role_BLL ToREPO(this Role r_repo )
         {
             return new Role_BLL
             {
@@ -20,7 +20,7 @@ namespace LaboApiGroup_BL.Mapper
 
         }
 
-        public static Role R_REPOtoR_BLL(this Role_BLL r)
+        public static Role ToBLL(this Role_BLL r)
         {
             return new Role
             {

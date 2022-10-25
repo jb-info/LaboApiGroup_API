@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LaboApiGroup_BL.Interfaces
 {
-    public interface IGiftService:IGlobalInterfaces<int,Gift_BLL>
+    public interface IGiftService : IGlobalInterfaces<int,Gift_BLL>
     {
     }
 }

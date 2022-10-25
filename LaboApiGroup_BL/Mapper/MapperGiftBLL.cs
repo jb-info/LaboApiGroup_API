@@ -10,7 +10,7 @@ namespace LaboApiGroup_BL.Mapper
 {
     public static class MapperGiftBLL
     {
-        public static Gift_BLL GiftBLLToGiftRepo(this Gift gf_Repo)
+        public static Gift_BLL ToREPO(this Gift gf_Repo)
         {
             return new Gift_BLL()
             {
@@ -24,7 +24,7 @@ namespace LaboApiGroup_BL.Mapper
 
 
         }
-        public static Gift GiftRepoToGiftBLL(this Gift_BLL gift_bll)
+        public static Gift ToBLL(this Gift_BLL gift_bll)
         {
             return new Gift()
             {

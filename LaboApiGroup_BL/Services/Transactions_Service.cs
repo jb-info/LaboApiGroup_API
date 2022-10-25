@@ -20,27 +20,27 @@ namespace LaboApiGroup_BL.Services
 
         public bool Delete(Transactions_BLL entity)
         {
-            return _repository.Delete(entity.Tr_REPOtoTrBLL());
+            return _repository.Delete(entity.ToBLL());
         }
 
         public Transactions_BLL Get(int id)
         {
-            return _repository.Get(id).Tr_BLLtoTr_REPO();
+            return _repository.Get(id).ToREPO();
         }
 
         public IEnumerable<Transactions_BLL> GetAll()
         {
-            return _repository.GetAll().Select(x => x.Tr_BLLtoTr_REPO());
+            return _repository.GetAll().Select(x => x.ToREPO());
         }
 
         public int Insert(Transactions_BLL entity)
         {
-            return _repository.Insert(entity.Tr_REPOtoTrBLL());
+            return _repository.Insert(entity.ToBLL());
         }
 
         public bool Update(Transactions_BLL data)
         {
-            return _repository.Update(data.Tr_REPOtoTrBLL());
+            return _repository.Update(data.ToBLL());
         }
     }
 }

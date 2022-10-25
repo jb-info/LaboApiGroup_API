@@ -3,7 +3,7 @@
 	@Status bit
 AS
 begin
-	if(@Status = 1)
+	if(@Status = 0)
 		begin
 			update Users set IsActive = 0 where Id_User = @Id;
 		end

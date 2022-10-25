@@ -14,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUserService, User_Service>();
+builder.Services.AddScoped<IGiftService, Gift_Sevice>();
 builder.Services.AddScoped<ITransactionService, Transactions_Service>();
 builder.Services.AddScoped<IProjectService, Project_Service>();
 builder.Services.AddScoped<IRoleService, Role_Service>();

@@ -13,18 +13,15 @@ namespace LaboApiGroup_Repo.Repositories
     public class GiftRepo : BasicRepository.BasicRepo<int, Gift>
     {
         
-        public GiftRepo() : base("Gift_id", "id")
+        public GiftRepo() : base("Gift", "Id_Gift")
         {
-        }
-        
+        }       
 
         public override bool Delete(Gift id)
         {
             Command cmd = new Command("P_Gift_Delete", true);
             cmd.AddParameter("@Id", id.Id);
-            return base.ConnectionString.ExecuteNonQuery(cmd) == 1;
-            
-            
+            return base.ConnectionString.ExecuteNonQuery(cmd) == 1;                       
         }
 
         public override int Insert(Gift entity)
@@ -42,21 +39,16 @@ namespace LaboApiGroup_Repo.Repositories
             cmd.AddParameter("Id" , data.Id);
             cmd.AddParameter("landing", data.landing);
             return base.ConnectionString.ExecuteNonQuery(cmd)==1;
-
         }
 
         protected override Gift Convert(IDataRecord dtr)
         {
             return new Gift
             {
-                Id= (int)dtr["Id"],
+                Id= (int)dtr["Id_Gift"],
                 Gift_Type=dtr["Gift_Type"].ToString(),
                 landing=(int)dtr["landing"]
-
-
-            };
-            
+            };            
         }
     }
-
 }
