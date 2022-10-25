@@ -11,7 +11,7 @@ namespace LaboApiGroup_BL.Mapper
 {
     public static class MapperTransactionsBLL
     {
-        public static Transactions_BLL Tr_BLLtoTr_REPO(this Transactions tr_repo)
+        public static Transactions_BLL ToREPO(this Transactions tr_repo)
         {
             return new Transactions_BLL()
             {
@@ -22,7 +22,7 @@ namespace LaboApiGroup_BL.Mapper
                 Date_Transaction = tr_repo.Date_Transaction,
             };
         }
-        public static Transactions Tr_REPOtoTrBLL(this Transactions_BLL tr)
+        public static Transactions ToBLL(this Transactions_BLL tr)
         {
             return new Transactions()
             {

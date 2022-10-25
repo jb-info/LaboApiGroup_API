@@ -10,7 +10,7 @@ namespace LaboApiGroup_BL.Mapper
 {
     public static class MapperProjectBLL
     {
-        public static Project_BLL P_BLLtoP_REPO(this Project pr_repo)
+        public static Project_BLL ToREPO(this Project pr_repo)
         {
             return new Project_BLL
             {
@@ -25,7 +25,7 @@ namespace LaboApiGroup_BL.Mapper
             };
         }
 
-        public static Project P_RepotoP_BLL(this Project_BLL pr)
+        public static Project ToBLL(this Project_BLL pr)
         {
             return new Project
             {
