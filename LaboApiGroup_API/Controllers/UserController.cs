@@ -24,7 +24,7 @@ namespace LaboApiGroup_API.Controllers
 
         public IActionResult SwitchStatus([FromBody] SwitchUser su)
         {
-            return Ok(_userService.SwitchStatus(su.Status));
+            return Ok(_userService.SwitchStatus(su.SwtichUserToBll()));
         }
 
         // GET: api/<UserController>
