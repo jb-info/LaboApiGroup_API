@@ -22,6 +22,18 @@ namespace LaboApiGroup_API.Controllers
             return Ok(_transactionService.Get(id));
         }
         [HttpGet]
+        [Route("GetFullTransacOfUser")]
+        public IActionResult GetFullTransacOfUser(Guid id, int idProject)
+        {
+            return Ok(_transactionService.GetFullTransacOfUser(id, idProject));
+        }
+        [HttpGet]
+        [Route("GetGifts")]
+        public IActionResult GetGifts(Guid id, int idProject)
+        {
+            return Ok(_transactionService.GetGifts(id, idProject));
+        }
+        [HttpGet]
         public IActionResult GetAll()
         {
             return Ok(_transactionService.GetAll());

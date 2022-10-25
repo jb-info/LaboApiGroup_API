@@ -19,6 +19,7 @@ builder.Services.AddScoped<ITransactionService, Transactions_Service>();
 builder.Services.AddScoped<IProjectService, Project_Service>();
 builder.Services.AddScoped<IRoleService, Role_Service>();
 builder.Services.AddScoped<JwtTokenManager>();
+builder.Services.AddScoped<IGiftOfProjectService, GiftOfProject_Service>();
 
 // Config du JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
