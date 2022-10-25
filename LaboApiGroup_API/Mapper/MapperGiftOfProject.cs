@@ -17,7 +17,7 @@ namespace LaboApiGroup_API.Mapper
             };
         }
 
-        public static GiftOfProject_BLL ClientToGiftOfProjectBL(this GiftOfProject_C giftofproject_C)
+        public static GiftOfProject_BLL ToBLL(this GiftOfProject_C giftofproject_C)
         {
             return new GiftOfProject_BLL()
             {

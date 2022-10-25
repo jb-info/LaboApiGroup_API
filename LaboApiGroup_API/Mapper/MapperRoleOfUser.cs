@@ -14,7 +14,7 @@ namespace LaboApiGroup_API.Mapper
                 Id_Role = ru_BLL.Id_Role
             };
         }
-        public static RoleOfUser_BLL ClientToRoleOfUserBL(this RoleOfUser_C roleOfUser_C)
+        public static RoleOfUser_BLL ToBLL(this RoleOfUser_C roleOfUser_C)
         {
             return new RoleOfUser_BLL()
             {

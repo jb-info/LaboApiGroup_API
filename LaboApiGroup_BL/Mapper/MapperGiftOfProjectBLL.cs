@@ -10,7 +10,7 @@ namespace LaboApiGroup_BL.Mapper
 {
     public static class MapperGiftOfProjectBLL
     {
-        public static GiftOfProject_BLL GOP_BLLtoGOP_REPO(this GiftOfProject gop_repo )
+        public static GiftOfProject_BLL ToREPO(this GiftOfProject gop_repo )
         {
             return new GiftOfProject_BLL()
             {
@@ -19,7 +19,7 @@ namespace LaboApiGroup_BL.Mapper
                 Id_Project=gop_repo.Id_Project,
             };
         }
-        public static GiftOfProject GOP_REPOtoGOP_BLL(this GiftOfProject_BLL gop)
+        public static GiftOfProject ToBLL(this GiftOfProject_BLL gop)
         {
             return new GiftOfProject()
             {

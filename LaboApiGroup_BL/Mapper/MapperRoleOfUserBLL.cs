@@ -10,7 +10,7 @@ namespace LaboApiGroup_BL.Mapper
 {
     public static class MapperRoleOfUserBLL
     {
-        public static RoleOfUser_BLL ROU_BLLtoROU_REPO(this RoleOfUser rou_repo )
+        public static RoleOfUser_BLL ToREPO(this RoleOfUser rou_repo )
         {
             return new RoleOfUser_BLL()
             {
@@ -21,7 +21,7 @@ namespace LaboApiGroup_BL.Mapper
 
 
         }
-        public static RoleOfUser ROU_REPOtoROU_BLL(this RoleOfUser_BLL rou)
+        public static RoleOfUser ToBLL(this RoleOfUser_BLL rou)
         {
             return new RoleOfUser()
             {

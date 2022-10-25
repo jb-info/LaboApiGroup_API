@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LaboApiGroup_BL.Interfaces
 {
-    public interface ITransactionsService:IGlobalInterfaces<int,Transactions_BLL>
+    public interface IGiftOfProjectService : IGlobalInterfaces<int, GiftOfProject_BLL>
     {
     }
 }
