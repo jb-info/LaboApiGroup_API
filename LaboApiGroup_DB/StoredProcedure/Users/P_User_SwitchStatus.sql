@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[P_User_SwitchStatus]
-	@Id int,
+	@Id uniqueidentifier,
 	@Status bit
 AS
 begin
