@@ -44,6 +44,11 @@ namespace LaboApiGroup_BL.Services
             return _repo.Login(u.ToRepo()).ToBLL();
         }
 
+        public bool SwitchStatus(Users_BLL u)
+        {
+            return _repo.SwitchStatus(u.ToRepo());
+        }
+
         public bool Update(Users_BLL data)
         {
             return _repo.Update(data.ToRepo());

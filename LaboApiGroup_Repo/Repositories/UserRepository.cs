@@ -55,6 +55,14 @@ namespace LaboApiGroup_Repo.Repositories
             return base.ConnectionString.ExecuteNonQuery(cmd) == 1;
 
         }
+        public bool SwitchStatus(Users data)
+        {
+            Command cmd = new("P_User_SwitchStatus", true);
+            cmd.AddParameter("Id",data.Id);
+            cmd.AddParameter("Status",data.IsActive);
+            return base.ConnectionString.ExecuteNonQuery(cmd)==1;
+        }
+
 
         public Users Login(Users u)
         {

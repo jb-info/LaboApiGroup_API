@@ -107,6 +107,7 @@
     <Build Include="Triggers\UserSoftDelete.sql" />
     <Build Include="StoredProcedure\Users\P_Users_Delete.sql" />
     <Build Include="StoredProcedure\Users\P_Admin_UserAdd.sql" />
+    <Build Include="StoredProcedure\Users\P_User_SwitchStatus.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LaboApiGroup_DB.publish.xml" />

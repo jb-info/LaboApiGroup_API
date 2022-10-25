@@ -51,5 +51,14 @@ namespace LaboApiGroup_API.Mapper
             };
         }
 
+        public static Users_BLL SwtichUserToBll(this SwitchUser su)
+        {
+            return new Users_BLL()
+            {
+                IsActive = su.Status,
+                Id = su.Id_User
+            };
+        }
+
     }
 }

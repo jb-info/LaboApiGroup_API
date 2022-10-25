@@ -33,4 +33,9 @@ namespace LaboApiGroup_API.Models
         public Role_C Role { get; set; }
         public string Token { get; set; }
     }
+    public class SwitchUser
+    {
+        public Guid Id_User { get; set; }
+        public bool Status { get; set; }
+    }
 }

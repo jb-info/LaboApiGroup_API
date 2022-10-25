@@ -22,6 +22,10 @@ namespace LaboApiGroup_API.Controllers
             _TokenManager = jwtTokenManager;
         }
 
+        public IActionResult SwitchStatus([FromBody] SwitchUser su)
+        {
+            return Ok(_userService.SwitchStatus(su.Status));
+        }
 
         // GET: api/<UserController>
         [HttpGet]
