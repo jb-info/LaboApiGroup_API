@@ -10,6 +10,6 @@ namespace LaboApiGroup_BL.Interfaces
     public interface ITransactionService : IGlobalInterfaces<int, Transactions_BLL>
     {
         int GetFullTransacOfUser(Guid id, int idProject);
-        IEnumerable<Gift_BLL> GetGifts(Guid id, int IdProject);
+        IEnumerable<Gift_BLL> GetGifts(Guid id, int IdProject, Func<Guid, int,int> GetTot);
     }
 }

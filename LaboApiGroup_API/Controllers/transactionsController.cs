@@ -31,7 +31,7 @@ namespace LaboApiGroup_API.Controllers
         [Route("GetGifts")]
         public IActionResult GetGifts(Guid id, int idProject)
         {
-            return Ok(_transactionService.GetGifts(id, idProject));
+            return Ok(_transactionService.GetGifts(id, idProject, _transactionService.GetFullTransacOfUser));
         }
         [HttpGet]
         public IActionResult GetAll()
