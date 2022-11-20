@@ -9,7 +9,6 @@ Modèle de script de post-déploiement
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-
 INSERT INTO [Gift] (Gift_Type,landing) VALUES
 ('DiscDurExterne',2),
 ('pcPortable i3',3),

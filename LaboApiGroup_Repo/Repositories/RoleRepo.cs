@@ -1,9 +1,11 @@
 ﻿using LaboApiGroup_DAL;
 using LaboApiGroup_Repo.Entities;
+using LaboApiGroup_Repo.Utils;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,11 +43,12 @@ namespace LaboApiGroup_Repo.Repositories
 
         protected override Role Convert(IDataRecord dtr)
         {
-            return new Role()
-            {
-                Id = (int)dtr["Id_Role"],
-                Name = dtr["Name"].ToString()
-            };           
+            //return new Role()
+            //{
+            //    Id = (int)dtr["Id_Role"],
+            //    Name = dtr["Name"].ToString()
+            //};
+            return GenericConvert<Role>.Convert(dtr);
         }
     }
 }

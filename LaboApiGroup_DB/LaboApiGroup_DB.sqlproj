@@ -94,7 +94,7 @@
     <Build Include="StoredProcedure\Role\P_Role_UPDATE.sql" />
     <Build Include="StoredProcedure\Users\P_Users_Add.sql" />
     <Build Include="StoredProcedure\Users\P_Users_Login.sql" />
-    <Build Include="Scripts\Script.PostDeployment1.sql" />
+    <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />
     <Build Include="StoredProcedure\RoleOfUser\P_RoleOfUser_DELETE.sql" />
     <Build Include="StoredProcedure\RoleOfUser\P_RoleOfUser_INSERT.sql" />
     <Build Include="StoredProcedure\RoleOfUser\P_RoleOfUser_UPDATE.sql" />

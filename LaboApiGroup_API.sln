@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboApiGroup_API", "LaboApiGroup_API\LaboApiGroup_API.csproj", "{8A9D391B-B86D-498B-9FBD-DC11400A7381}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaboApiGroup_API", "LaboApiGroup_API\LaboApiGroup_API.csproj", "{8A9D391B-B86D-498B-9FBD-DC11400A7381}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LaboApiGroup_DB", "LaboApiGroup_DB\LaboApiGroup_DB.sqlproj", "{2481F080-696F-490E-AFA2-397476CD6173}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboApiGroup_DAL", "LaboApiGroup_DAL\LaboApiGroup_DAL.csproj", "{DF064298-DC3E-44CF-8E20-12E53CAAC66E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaboApiGroup_DAL", "LaboApiGroup_DAL\LaboApiGroup_DAL.csproj", "{DF064298-DC3E-44CF-8E20-12E53CAAC66E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboApiGroup_Repo", "LaboApiGroup_Repo\LaboApiGroup_Repo.csproj", "{B954FDB7-0455-4C6B-A16A-660880148586}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaboApiGroup_Repo", "LaboApiGroup_Repo\LaboApiGroup_Repo.csproj", "{B954FDB7-0455-4C6B-A16A-660880148586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaboApiGroup_BL", "LaboApiGroup_BL\LaboApiGroup_BL.csproj", "{6BB2DF1D-39CB-44E6-A83B-62E102231825}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaboApiGroup_BL", "LaboApiGroup_BL\LaboApiGroup_BL.csproj", "{6BB2DF1D-39CB-44E6-A83B-62E102231825}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{01B8CF76-3616-487D-9EF1-E8D394E6F571}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{6BB2DF1D-39CB-44E6-A83B-62E102231825}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BB2DF1D-39CB-44E6-A83B-62E102231825}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BB2DF1D-39CB-44E6-A83B-62E102231825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B8CF76-3616-487D-9EF1-E8D394E6F571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B8CF76-3616-487D-9EF1-E8D394E6F571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B8CF76-3616-487D-9EF1-E8D394E6F571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B8CF76-3616-487D-9EF1-E8D394E6F571}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
