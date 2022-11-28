@@ -12,5 +12,8 @@ namespace LaboApiGroup_BL.Interfaces
     {
         public Users_BLL Login(Users_BLL u);
         public bool SwitchStatus(Users_BLL u);
+        public Guid Register(Users_BLL entity);
+
+
     }
 }

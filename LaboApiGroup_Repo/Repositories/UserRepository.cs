@@ -30,7 +30,7 @@ namespace LaboApiGroup_Repo.Repositories
             cmd.AddParameter("BirthDate", entity.BirthDate);
             cmd.AddParameter("Password", entity.PassWord);
             cmd.AddParameter("IsAdmin",entity.IsAdmin);
-            cmd.AddParameter("IsActive",entity.IsActive);
+            cmd.AddParameter("IsActive", entity.IsActive);
             return (Guid)base.ConnectionString.ExecuteScalar(cmd);
 
         }

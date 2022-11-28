@@ -22,7 +22,7 @@ namespace LaboApiGroup_API.Controllers
             _TokenManager = jwtTokenManager;
         }
 
-        [HttpPost]
+        [HttpPut]
         [Route("SwitchUserStatus")]
         public IActionResult SwitchStatus([FromBody] SwitchUser su)
         {
@@ -77,7 +77,12 @@ namespace LaboApiGroup_API.Controllers
                 return Ok(_userService.Insert(u.ToBll()));
         }
 
-
+        [HttpPost]
+        [Route("Register")]
+        public IActionResult Register([FromBody] Users_C u)
+        {
+            return Ok(_userService.Register(u.ToBll()));
+        }
 
         // PUT api/<UserController>/5
         [HttpPut("{id}")]

@@ -17,7 +17,6 @@ namespace LaboApiGroup_API.Models
         public bool IsAdmin { get; set; }
         public bool IsActive { get; set; }
     }
-
     public class Login_User
     {
         [Required]
@@ -38,6 +37,6 @@ namespace LaboApiGroup_API.Models
         [Required]
         public Guid Id_User { get; set; }
         [Required]
-        public bool Status { get; set; }
+        public bool IsActive { get; set; }
     }
 }

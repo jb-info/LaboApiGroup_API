@@ -39,6 +39,11 @@ namespace LaboApiGroup_BL.Services
             return _repo.Insert(entity.ToRepo());
         }
 
+        public Guid Register(Users_BLL entity)
+        {
+            return _repo.Register(entity.ToRepo());
+        }
+
         public Users_BLL Login(Users_BLL u)
         {
             return _repo.Login(u.ToRepo()).ToBLL();

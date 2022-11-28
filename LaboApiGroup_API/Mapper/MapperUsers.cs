@@ -55,7 +55,7 @@ namespace LaboApiGroup_API.Mapper
         {
             return new Users_BLL()
             {
-                IsActive = su.Status,
+                IsActive = su.IsActive,
                 Id = su.Id_User
             };
         }
