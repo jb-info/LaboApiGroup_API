@@ -48,6 +48,7 @@ namespace LaboApiGroup_Repo.Repositories
         public override bool Update(Users data)
         {
             Command cmd = new("P_Users_UPDATE", true);
+            cmd.AddParameter("id", data.Id);
             cmd.AddParameter("NickName", data.NickName);
             cmd.AddParameter("BirthDate", data.BirthDate);
             cmd.AddParameter("Email", data.Email);
@@ -55,6 +56,8 @@ namespace LaboApiGroup_Repo.Repositories
             return base.ConnectionString.ExecuteNonQuery(cmd) == 1;
 
         }
+
+        //switch isActive
         public bool SwitchStatus(Users data)
         {
             Command cmd = new("P_User_SwitchStatus", true);

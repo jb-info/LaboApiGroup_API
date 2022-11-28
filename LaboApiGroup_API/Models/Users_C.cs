@@ -13,7 +13,7 @@ namespace LaboApiGroup_API.Models
         public DateTime BirthDate { get; set; }
         [Required]
         [DataType(DataType.Password)]
-        public string PassWord { get; set; }
+        public string PassWord { get; set; }    
         public bool IsAdmin { get; set; }
         public bool IsActive { get; set; }
     }

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using LaboApiGroup_API.Mapper;
 using LaboApiGroup_BL.Models;
 using LaboApiGroup_API.JwtToken;
+using LaboApiGroup_Repo.Entities;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -85,9 +86,12 @@ namespace LaboApiGroup_API.Controllers
         }
 
         // PUT api/<UserController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public IActionResult Put([FromBody] Users_C u)
         {
+            //if (u is null || ModelState.IsValid) return BadRequest();
+            //else
+                return Ok(this._userService.Update(u.ToBll()));
         }
 
         // DELETE api/<UserController>/5
